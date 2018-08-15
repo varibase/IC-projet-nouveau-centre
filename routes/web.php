@@ -11,7 +11,6 @@
 |
 */
 
-Route::get('/generate','IndexController@cards');
 
 Route::get('/', 'IndexController@home')->name('home');
 

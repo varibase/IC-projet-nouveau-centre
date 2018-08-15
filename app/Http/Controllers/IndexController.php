@@ -26,23 +26,6 @@ class IndexController extends Controller
         return view('home');
     }
 
-    public function cards()
-    {
-        for($i=0; $i<92;$i++)
-        {
 
-            $cardnum = random_bytes(8);
-            $cardnum = bin2hex($cardnum);
-            $cardnum = substr($cardnum, 0, 6);
-            $cardnum = "46".$cardnum;
-            $card = new Card();
-            $card->type_id = 2;
-            $card->card_number = $cardnum;
-            $card->save();
-
-        }
-
-        return $cardnum;
-    }
 
 }
