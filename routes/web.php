@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/generate','IndexController@cards');
+
+Route::get('/', 'IndexController@home')->name('home');
 
 Route::get('/register', 'RegistrationController@create');
 Route::post('/register/{location}', 'UsersController@register');

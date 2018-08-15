@@ -1,0 +1,40 @@
+#banner-fifty{
+  margin-top: -56px;
+}
+
+#banner-fifty-left{
+  background: url('/img/pangram.png');
+  background-size: cover;
+  height: 650px;
+}
+
+#banner-fifty-left .row{
+  height:650px;
+}
+
+.logo-row{
+  height:183px;
+  background:white;
+}
+
+.c-logo{
+  text-align:center;
+  position:relative;
+  top:-183px;
+  left:-60px;
+}
+
+.c-logo svg{
+  height: 367px;
+}
+@media (max-width: 768px) {
+  .c-logo svg{
+    height: 185px !important;
+  }
+  .c-logo{
+    left: -30px !important;
+  }
+  .logo-row{
+    height:0px !important;
+  }
+}

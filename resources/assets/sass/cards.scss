@@ -1,0 +1,27 @@
+.card{
+  padding-top:80px;
+  z-index: -1;
+  border-radius: 0px;
+  border:none;
+  background:#d8d4d0;
+}
+
+.card-img-over{
+  position: relative;
+  top:80px;
+}
+
+.card-body{
+  padding-bottom: 0px;
+  padding-left:0px;
+  padding-right: 0px;
+}
+
+.card-text{
+  padding:1.25rem;
+}
+
+.card-body .btn{
+  background: #000000;
+  border-radius:0px;
+}

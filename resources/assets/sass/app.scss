@@ -1,14 +1,44 @@
 
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
+@font-face{font-family:GauthierFY;src:url("/css/fonts/GauthierFY.otf") format("opentype");font-weight:400;font-style:normal}
 // Variables
 @import "variables";
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+@import "navbar";
+@import "banner-fifty";
+@import "cards";
+@import "footer";
+
+body{
+  background-color:#efece8;
+  font-family: Arial, sans-serif;
 }
+
+.fas{
+ font-size:25px;
+}
+h2{
+  font-family: GauthierFY, Arial, sans-serif;
+  font-size: 34px;
+}
+
+h3{
+  font-size:34px;
+}
+
+#icons-list{
+  position: absolute;
+  top:25px;
+  right:25px;
+}
+#icons-list a{
+  padding-left: 15px;
+}
+
+
+
+
