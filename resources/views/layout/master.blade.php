@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ App::getLocale() }}">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/app.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Projet Nouveau Centre</title>
 </head>
 <body>
@@ -21,6 +21,7 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="/js/app.js"></script>
 <script type="text/javascript" src="/js/markerclusterer/markerclusterer.js"></script>
 </body>

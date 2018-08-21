@@ -2,26 +2,26 @@
 
 @section('content')
 
-    @include('partials.banner-fifty')
+    @include('partials.banner2')
 
     <div class="container-fluid">
-        <div class="row bg-white">
-            <div class="col-12 col-md-6 offset-md-3 py-5 text-center" >
-                <p>En tant que résidents ou professionnels occupants de la tour Place Ville Marie, vous êtes au cœur de notre initiative de revitalisation du centre-ville de Montréal, c’est pourquoi nous avons crée la carte électronique Projet Nouveau Centre Privilèges qui vous permettra de bénéficier en tout temps de rabais et offres chez nos partenaires.</p>
+        <div class="row bg-white justify-content-md-center">
+            <div class="col col-md-9 col-lg-5 py-5 px-4 text-center txt-punch" data-aos="zoom-out-up" data-aos-delay="100" data-aos-duration="800">
+                <h5>@lang('pages.home.sous-titre')</h5>
             </div>
         </div>
-        <div class="row py-4 px-2 align-items-center">
-            <div class="col-12 justify-content-center" align="center">
-                <h3>Vos Privil&egrave;ges</h3>
-                <div id="icons-list">
-                    <a class="icon" id="icon-list" >
-                        <i class="fas fa-list-ul"></i>
+        <div class="row align-items-center">
+            <div class="bloc-privileges col-12 justify-content-center" align="center">
+                <h3 class="d-inline">@lang('pages.home.privileges')</h3>
+                <div id="icons-list" class="d-inline float-right mr-3">
+                    <a class="icon" id="icon-list" style="display: none">
+                        <i class="ilist"></i>
                     </a>
-                    <a class="icons" id="icon-map" style="display: none">
-                        <i class="fas fa-map-marked"></i>
+                    <a class="icons" id="icon-map">
+                        <i class="imap"></i>
                     </a>
                     <a class="icon" id="icon-filter">
-                        <i class="fas fa-filter"></i>
+                        <i class="ifilter"></i>
                     </a>
 
                 </div>
@@ -31,18 +31,14 @@
     </div>
 
     <div class="offers-list">
-        <div id="regular-list" style="display: none;">
+        <div id="regular-list" class="mb-5">
             @include('partials.offers-list')
         </div>
-        <div id="maps-list" >
+        <div id="maps-list" style="display: none;" >
             @include('partials.google-map')
         </div>
     </div>
 
-
-
-
-
-
+    @include('partials.modals')
 
 @endsection

@@ -12,7 +12,19 @@ body {
   z-index: 10;
 }
 
+.nav-link {
+  text-transform:uppercase;
+  color:#000000;
+}
+.nav-item.active a.nav-link{
+  font-weight:600;
+}
+
 @media (max-width: 991.98px) {
+  .navbar-nav {
+    padding-top: 5rem;
+  }
+
   .offcanvas-collapse {
     position: fixed;
     top: 0px; /* Height of navbar */
@@ -69,7 +81,7 @@ body {
 }
 
 .nav-underline .active {
-  font-weight: 500;
+  font-weight: 600;
   color: #343a40;
 }
 
@@ -83,4 +95,17 @@ body {
 
 .navbar-toggler{
   z-index: 10;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    margin-top: 20px;
+    background-color:rgba(255, 255, 255, .3)
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.1rem;
+    padding-left: 1.1rem;
+
+  }
 }

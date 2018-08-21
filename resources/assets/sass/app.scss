@@ -1,6 +1,6 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
 @font-face{font-family:GauthierFY;src:url("/css/fonts/GauthierFY.otf") format("opentype");font-weight:400;font-style:normal}
 // Variables
 @import "variables";
@@ -9,9 +9,10 @@
 @import '~bootstrap/scss/bootstrap';
 
 @import "navbar";
-@import "banner-fifty";
+@import "banner2";
 @import "cards";
 @import "footer";
+@import "modal";
 
 body{
   background-color:#efece8;
@@ -26,19 +27,42 @@ h2{
   font-size: 34px;
 }
 
-h3{
-  font-size:34px;
+.bloc-privileges h3{
+  font-size: 3rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 0.5;
+}
+h5 {
+  font-size:17px;
+  line-height:24px;
 }
 
-#icons-list{
-  position: absolute;
-  top:25px;
-  right:25px;
-}
 #icons-list a{
   padding-left: 15px;
+  cursor:pointer;
+}
+.bloc-privileges {
+  margin-top:3rem;
+}
+#maps-list {
+  margin-top:1.8rem;
 }
 
+@media (max-width: 768px) {
+  h5 {
+    text-align:left;
+    margin-left:1rem;
+  }
+  .bloc-privileges {
+    margin-top: 2rem;
+  }
+  .bloc-privileges h3 {
+    font-size: 2.2rem;
+    float: left;
+    margin-left: 1rem;
+  }
 
+}
 
 

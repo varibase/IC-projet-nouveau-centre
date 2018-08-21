@@ -1,5 +1,39 @@
+.ilist {
+  background-image: url('/img/icons/liste.png');
+  width:28px;
+  height:21px;
+  display:inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 28px 21px;
+  font-size: 1px;
+  line-height: 1;
+}
+.imap {
+  background-image: url('/img/icons/carte.png');
+  width:24px;
+  height:22px;
+  display:inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 24px 22px;
+  font-size: 1px;
+  line-height: 1;
+}
+.ifilter {
+  background-image: url('/img/icons/filtre.png');
+  width:19px;
+  height:22px;
+  display:inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 19px 22px;
+  font-size: 1px;
+  line-height: 1;
+}
+
 .card{
-  padding-top:80px;
+  padding-top:60px;
   z-index: -1;
   border-radius: 0px;
   border:none;
@@ -8,7 +42,7 @@
 
 .card-img-over{
   position: relative;
-  top:80px;
+  top:60px;
 }
 
 .card-body{
@@ -16,12 +50,31 @@
   padding-left:0px;
   padding-right: 0px;
 }
-
+.card-title {
+  font-family: GauthierFY, Arial, sans-serif;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  margin-bottom:0;
+  text-align: center;
+}
 .card-text{
   padding:1.25rem;
+  font-size:16px;
 }
 
 .card-body .btn{
   background: #000000;
   border-radius:0px;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .card{
+    padding-top:30px;
+  }
+  
+  .card-img-over{
+    top:30px;
+  }
+
 }

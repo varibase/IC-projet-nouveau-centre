@@ -14,6 +14,13 @@
 
 Route::get('/', 'IndexController@home')->name('home');
 
+Route::get('/lang/{lang?}',[
+    'uses'=>'LangSwitcherController@LangSwitcher',
+    'as'  => 'lang.switch'
+]);
+
+Route::get('/offer/{offerid}', 'OfferController@show');
+
 Route::get('/register', 'RegistrationController@create');
 Route::post('/register/{location}', 'UsersController@register');
 

@@ -50,7 +50,7 @@ return [
     | Perform the loading and rendering of Googlmapper map asynchronously.
     |
     */
-    'async' => false,
+    'async' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -83,7 +83,7 @@ return [
     | location.
     |
     */
-    'locate' => false,
+    'locate' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -203,7 +203,7 @@ return [
         | Display a custom icon for markers. (Link to an image)
         |
         */
-        'icon' => '/img/pin.png',
+        'icon' => '/img/pin-red.png',
 
         /*
         |--------------------------------------------------------------------------
