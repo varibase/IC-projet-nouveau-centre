@@ -1,0 +1,61 @@
+#banner-fifty{
+  margin-top: -75px;
+}
+
+#banner-fifty-left{
+  background: url('/img/fond-desktop.jpg');
+  background-size: cover;
+
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.logo-row{
+  height:140px;
+  background:white;
+}
+   
+.c-logo{
+ 
+  text-align:center;
+  position:relative;
+  top:-183px;
+  left:-30px;
+}
+
+.c-logo svg{
+  height: 330px;
+}
+@media (max-width: 768px) {
+
+    #banner-fifty{
+        margin-top: -51px;
+      }
+
+    #banner-fifty-left{
+        background: url('/img/fond-mobile.jpg');
+        background-size: cover;
+    }
+
+    .img-title {
+        padding-left: 0.5rem;
+        padding-top: 3.5rem;
+    }
+    .logo-row {
+        height: 100px;
+    }
+
+}
+@media (min-width: 769px) {
+
+    .img-title {
+        padding-left: 3rem;
+        padding-top: 3rem;
+    }
+}
+@media (max-height: 480px) and (max-width:769px) {
+
+    #banner-fifty-left{
+        background-position: 0;
+    }
+}

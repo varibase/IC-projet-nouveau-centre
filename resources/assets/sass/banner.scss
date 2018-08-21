@@ -1,0 +1,56 @@
+#banner{
+/*  margin-top: -56px;*/
+height:700px;
+}
+/*utiliser une image desktop pour que ca fonctionne*/
+
+#banner-bg{
+  background: url('/img/GettyImages-621702858.jpg'), white;
+  background-size: auto 480px, auto 300px;
+
+ /* background-position: 0 1000px, 0 0;*/
+  
+  background-repeat: no-repeat;
+}
+
+/*
+#banner-bg .row{
+  height:480px;
+}
+*/
+/*
+.logo-row{
+  height:183px;
+  background:white;
+}
+/*
+.c-logo{
+    
+  text-align:center;
+  position:relative;
+ /* top:-183px;
+  left:-60px;*/
+/*}
+
+.c-logo svg{
+  height: 367px;
+}
+*/
+@media (max-width: 768px) {
+
+    #banner-bg{
+
+        background-size: cover;
+
+      }
+/*
+  .c-logo svg{
+    height: 185px !important;
+  }
+  .c-logo{
+    left: -30px !important;
+  }
+  .logo-row{
+    height:0px !important;
+  }*/
+}
