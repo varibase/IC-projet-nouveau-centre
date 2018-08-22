@@ -17,13 +17,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">@lang('pages.navbar.espace-membre')</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item langues">
                             <a class="nav-link" href="{{route('lang.switch',['lang'=> __('pages.switch-lang') ])}}">@lang('pages.switch-lang')</a>
                         </li>
                     </ul>
                 </div>
             </nav>
-
         </div>
     </div>
 </div>
