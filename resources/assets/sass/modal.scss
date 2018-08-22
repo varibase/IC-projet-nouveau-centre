@@ -4,6 +4,9 @@
 
 
 /* DESIGN GLOBAL MODAL **/
+html, body {
+    overflow: inherit;
+}
 .modal-content {
     border-radius: 0;
     border: 0;
@@ -14,11 +17,17 @@
 }
 .modal-header .close {
     font-family: 'Open Sans', sans-serif;
+    z-index: 10000;
 }
 
 
-
 /* MODAL OFFER **/
+#offerModal .modal-body {
+    padding:0;
+}
+#offerModal .modal-body .container {
+    padding: 1rem 2rem 1rem 2rem;
+}
 #offerModal .modal-content { 
     background-color:#efece8;
 }
@@ -98,7 +107,7 @@
 
     .modal-body {
     position: absolute;
-    top: 25px;
+    top: 15px;
     bottom: 60px;
     width: 100%;
     font-weight: 300;
@@ -124,7 +133,7 @@
     width: 200px;
     }
 
-
+/*
     ::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 10px;
@@ -135,8 +144,11 @@
     ::-webkit-scrollbar-thumb {
     background: darken(#f1f3f5, 20%);
     }
+*/
 
-
+    #offerModal .modal-body {
+        bottom: 0;
+    }
     #offerModal img{ 
         text-align:center;
         margin:1rem auto;
@@ -148,5 +160,8 @@
         margin-top:1.5rem;
     }
 
+    #offerModal .modal-body .card-title {
+        margin-top: 1rem;
+    }
     
 }

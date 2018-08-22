@@ -1,15 +1,15 @@
 @include('googlmapper::javascript')
 
-@foreach ($items as $id => $item)
+@foreach ($items as $new_id => $item)
 
-	{!! $item->render($id, $view) !!}
+	{!! $item->render($new_id, $view) !!}
 
     @if ($options['async'])
 
         <script type="text/javascript">
-
+            
             initialize_items.push({
-                method: initialize_{!! $id !!}
+                method: initialize_{!! $new_id !!}
             });
 
         </script>

@@ -19,6 +19,16 @@ body{
   font-family: Arial, sans-serif;
 }
 
+a, a:focus, a:active {
+	outline: none;
+}
+.btn-dark:not(:disabled):not(.disabled):active:focus, 
+.btn-dark:not(:disabled):not(.disabled).active:focus, 
+.show > .btn-dark.dropdown-toggle:focus,
+.btn-dark:focus, .btn-dark.focus {
+  box-shadow:none;
+}
+
 .fas{
  font-size:25px;
 }

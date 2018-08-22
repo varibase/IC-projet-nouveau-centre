@@ -73,7 +73,6 @@ AOS.init();
 // peut etre rendu générique :
 $('#offerModal').on('show.bs.modal', function (e) {
     $(this).find('.modal-body').load(e.relatedTarget.href);
-
 });
 
 

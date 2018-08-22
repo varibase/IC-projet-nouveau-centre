@@ -1,10 +1,12 @@
-<div id="map-canvas-{!! $id !!}" style="width: 100%; height: 100%; margin: 0; padding: 0; position: relative; overflow: hidden;"></div>
+<?php $new_id = time() . '_' . $id; ?>
+
+<div id="map-canvas-{!! $new_id !!}" style="width: 100%; height: 100%; margin: 0; padding: 0; position: relative; overflow: hidden;"></div>
 
 <script type="text/javascript">
 
 	var maps = [];
 
-	function initialize_{!! $id !!}() {
+	function initialize_{!! $new_id !!}() {
 		var bounds = new google.maps.LatLngBounds();
 		var infowindow = new google.maps.InfoWindow();
 		var position = new google.maps.LatLng({!! $options['latitude'] !!}, {!! $options['longitude'] !!});
@@ -189,7 +191,7 @@
             ]
 		};
 
-		var map_{!! $id !!} = new google.maps.Map(document.getElementById('map-canvas-{!! $id !!}'), mapOptions_{!! $id !!});
+		var map_{!! $id !!} = new google.maps.Map(document.getElementById('map-canvas-{!! $new_id !!}'), mapOptions_{!! $id !!});
 		map_{!! $id !!}.setTilt({!! $options['tilt'] !!});
 
 		var markers = [];
@@ -271,8 +273,9 @@
 
     @if (!$options['async'])
 
-	    google.maps.event.addDomListener(window, 'load', initialize_{!! $id !!});
+	    google.maps.event.addDomListener(window, 'load', initialize_{!! $new_id !!});
 
+        initialize_{!! $new_id !!}();
     @endif
 
 </script>

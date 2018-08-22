@@ -16,14 +16,14 @@
                 <p>Offre valable jusqu’au 31/10/2018<br>
                 Adresse: 705 rue Sainte Catherine Ouest, bureau 5-104<br>
                 Montréal, QC  H3B 4G5 
-                <a href="#">voir itinéraire</a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=705+rue+Sainte+Catherine+Ouest,+bureau+5-104,Montréal,+QC+H3B+4G5" target="_blank">voir itinéraire</a>
                 </p>
                 <p class="mentions">Offre non cumulable avec d’autres promotions.</p>
             </div>
         </div>
     </div>
 
-    <div id="map-offer" style="width:100%; height: 450px;">
+    <div id="map-offer" style="width:100%; height: 425px;">
     {!! Mapper::render() !!}
     </div>
   
