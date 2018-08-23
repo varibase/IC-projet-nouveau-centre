@@ -3,7 +3,9 @@
         <div class="col-12">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <button class="navbar-toggler p-0 border-0 ml-auto pt-2" type="button" data-toggle="offcanvas">
-                    <span class="navbar-toggler-icon"></span>
+                    <div class="burger-container">
+                        <span class="navbar-toggler-icon"></span>
+                    </div>
                 </button>
 
                 <div class="navbar-collapse offcanvas-collapse">
