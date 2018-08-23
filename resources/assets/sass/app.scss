@@ -59,6 +59,14 @@ h5 {
   margin-top:1.8rem;
 }
 
+.invalid-feedback {
+  font-size: 90%;
+  font-style: oblique;
+}
+.was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
+  color: inherit;
+}
+
 @media (max-width: 768px) {
   h5 {
     text-align:left;

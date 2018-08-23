@@ -70,9 +70,38 @@ $('#icon-list > i').on('click',function(){
 // animations:
 AOS.init();
 
-// peut etre rendu générique :
-$('#offerModal').on('show.bs.modal', function (e) {
-    $(this).find('.modal-body').load(e.relatedTarget.href);
+// modals :
+$('.modal').on('show.bs.modal', function (e) {
+    
+    var $modalParams = $(e.relatedTarget);
+    var $modal = $(this);
+
+    $modal.find('.modal-body').html("");
+
+    $modal.addClass($modalParams.data('class'));
+
+    if ( $modalParams.data('footer') == 1 ) {
+        $modal.find('.modal-footer').show();
+        $modal.find('#call2action').html($modalParams.data('action')); 
+    } else {
+        $modal.find('.modal-footer').hide();
+    }
+
+    $modal.find('.modal-body').load(e.relatedTarget.href);
 });
 
+$('#call2action').on('click',function(event){
 
+    var forms = $('#call2actionform');
+
+    var validation = Array.prototype.filter.call(forms, function(form) {
+
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        } else {
+           // $('#call2actionform').submit();
+        }
+        form.classList.add('was-validated');
+    });
+});

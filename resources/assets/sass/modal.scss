@@ -3,7 +3,6 @@
 }
 
 
-/* DESIGN GLOBAL MODAL **/
 html, body {
     overflow: inherit;
 }
@@ -20,64 +19,104 @@ html, body {
     z-index: 10000;
 }
 
-
-/* MODAL OFFER **/
-#offerModal .modal-body {
+.modal-body {
     padding:0;
 }
-#offerModal .modal-body .container {
+.modal-body .container {
     padding: 1rem 2rem 1rem 2rem;
 }
-#offerModal .modal-content { 
+.modal-content { 
     background-color:#efece8;
 }
+.modal-footer {
+    padding:0;
+    border:none;
+}
 
-#offerModal img{ 
+.offerModal img{ 
     float: right;
 }
-#offerModal a{ 
+.offerModal a{ 
     color:#787673;
     text-decoration:underline;
 }
-#offerModal .mentions {
+.offerModal .mentions {
     margin-top:3rem;
     font-size:12px;
 }
-#offerModal .modal-body .card-title {
+.offerModal .modal-body .card-title {
     margin-bottom:1.5rem;
     text-align:left;
     max-width: 80%;
     margin-left: 0;
 }
 
+.modal-body h1 {
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom:1.8rem;
+}
+
+.modal-body input,
+.modal-body select {
+    border-radius:0;
+    border:none;
+}
+.modal-body input[type="text"]:focus {
+    background-color: #fff;
+    border-color: #495057;
+    border-width:1px;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.1rem rgba(73, 80, 87, 0.25);
+    box-shadow: 0 0 0 0.1rem rgba(73, 80, 87, 0.25);
+}
+.modal-body select:focus {
+    box-shadow:none;
+    border:none;
+    outline: 0;
+}
+.custom-select {
+
+    background: #fff url('/img/icons/select_icon.png') no-repeat right 0.75rem center;
+
+}
+
+#call2action {
+    background: #000000;
+    border-radius:0px;
+    font-size: 1.05rem;
+    height:100%;
+}
 
 @media (max-width: 767.99px) {
 
     .modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
     }
 
     .modal-dialog {
-    position: fixed;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    padding: 0;
+        position: fixed;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
     }
 
     .modal-content {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border:none;
-    box-shadow: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border:none;
+        box-shadow: none;
     }
 
     .modal-header {
@@ -99,68 +138,53 @@ html, body {
 
 
     .modal-title {
-    font-weight: 300;
-    font-size: 2em;
-    color: #fff;
-    line-height: 30px;
+        font-weight: 300;
+        font-size: 2em;
+        color: #fff;
+        line-height: 30px;
     }
 
     .modal-body {
-    position: absolute;
-    top: 15px;
-    bottom: 60px;
-    width: 100%;
-    font-weight: 300;
-    overflow: auto;
+        position: absolute;
+        top: 15px;
+        bottom: 60px;
+        width: 100%;
+        font-weight: 300;
+        overflow: auto;
     }
 
     .modal-footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 60px;
-    padding: 10px;
-    background: #f1f3f5;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 60px;
     }
 
     .btn-modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -20px;
-    margin-left: -100px;
-    width: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -20px;
+        margin-left: -100px;
+        width: 200px;
     }
 
-/*
-    ::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 10px;
-    background: #f1f3f5;
-    border-left: 1px solid darken(#f1f3f5, 10%);
-    }
-
-    ::-webkit-scrollbar-thumb {
-    background: darken(#f1f3f5, 20%);
-    }
-*/
-
-    #offerModal .modal-body {
+    .offerModal .modal-body {
         bottom: 0;
     }
-    #offerModal img{ 
+    .offerModal img{ 
         text-align:center;
         margin:1rem auto;
         display: block;
         float:none;
     }
 
-    #offerModal .mentions {
+    .offerModal .mentions {
         margin-top:1.5rem;
     }
 
-    #offerModal .modal-body .card-title {
+    .offerModal .modal-body .card-title {
         margin-top: 1rem;
     }
     

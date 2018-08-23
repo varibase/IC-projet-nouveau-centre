@@ -15,6 +15,33 @@ return [
         'privileges'    => 'Vos Privil&egrave;ges'
     ],
 
+    'register'       => [
+        'titre'    => 'Devenir Membre',
+        'button'    => 'DEVENIR MEMBRE',
+
+        'firstname'   => 'Prénom',
+        'lastname'    => 'Nom',
+        'email'       => 'Courriel',
+        'phone'       => 'Cellulaire',
+        'company'   => 'Compagnie',
+        'companylist'      => [
+                    "1" => "Ivanhoé Cambridge",
+                    "2" => "Lorem Ipsum",
+                    "3" => "Lorem Ipsum",
+        ],
+        'lang'      => 'Langue de préférence',
+        'langFR'    => 'Français',
+        'langEN'    => 'English',
+        'terms'    => "J'accepte les conditions d'utilisation",
+        'optin'    => "J'accepte de recevoir des communications de la part d'Invahoé Cambridge",
+    ],
+
+    'formerrors'       => [
+        'firstname'    => "Merci d'indiquer votre prénom",
+        'lastname'    => "Merci d'indiquer votre nom",
+        'email'        => "Merci d'indiquer une adresse email valide",
+        'terms'         => "Vous devez accepter les CGU"
+    ],
 
     'footer'      => [
         'l1' => '&copy; 2018 Ivanhoé Cambridge',

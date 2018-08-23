@@ -9,7 +9,7 @@
                         <h5 class="card-title">10% de rabais au Marché Artisans</h5>
                         <p class="card-text">Un marché urbain unique au centre-ville de Montréal, qui rassemble des producteurs et artisans locaux, favorisant un...</p>
                     </div>
-                    <a id="offer-{{$i}}" href="/offer/{{$i}}" data-toggle="modal" data-target="#offerModal" class="btn btn-dark btn-block btn-lg">EN SAVOIR PLUS</a>
+                    <a id="offer-{{$i}}" href="/offer/{{$i}}" data-toggle="modal" data-target="#actionModal" data-footer="0" data-class="offerModal" class="btn btn-dark btn-block btn-lg">EN SAVOIR PLUS</a>
                 </div>
             </div>
 

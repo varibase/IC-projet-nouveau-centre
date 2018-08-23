@@ -10800,8 +10800,6 @@ body {
           box-sizing: border-box;
 }
 
-/* DESIGN GLOBAL MODAL **/
-
 html,
 body {
   overflow: inherit;
@@ -10822,39 +10820,83 @@ body {
   z-index: 10000;
 }
 
-/* MODAL OFFER **/
-
-#offerModal .modal-body {
+.modal-body {
   padding: 0;
 }
 
-#offerModal .modal-body .container {
+.modal-body .container {
   padding: 1rem 2rem 1rem 2rem;
 }
 
-#offerModal .modal-content {
+.modal-content {
   background-color: #efece8;
 }
 
-#offerModal img {
+.modal-footer {
+  padding: 0;
+  border: none;
+}
+
+.offerModal img {
   float: right;
 }
 
-#offerModal a {
+.offerModal a {
   color: #787673;
   text-decoration: underline;
 }
 
-#offerModal .mentions {
+.offerModal .mentions {
   margin-top: 3rem;
   font-size: 12px;
 }
 
-#offerModal .modal-body .card-title {
+.offerModal .modal-body .card-title {
   margin-bottom: 1.5rem;
   text-align: left;
   max-width: 80%;
   margin-left: 0;
+}
+
+.modal-body h1 {
+  font-size: 2rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 1.8rem;
+}
+
+.modal-body input,
+.modal-body select {
+  border-radius: 0;
+  border: none;
+}
+
+.modal-body input[type="text"]:focus {
+  background-color: #fff;
+  border-color: #495057;
+  border-width: 1px;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.1rem rgba(73, 80, 87, 0.25);
+  box-shadow: 0 0 0 0.1rem rgba(73, 80, 87, 0.25);
+}
+
+.modal-body select:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  outline: 0;
+}
+
+.custom-select {
+  background: #fff url("/img/icons/select_icon.png") no-repeat right 0.75rem center;
+}
+
+#call2action {
+  background: #000000;
+  border-radius: 0px;
+  font-size: 1.05rem;
+  height: 100%;
 }
 
 @media (max-width: 767.99px) {
@@ -10927,8 +10969,6 @@ body {
     bottom: 0;
     left: 0;
     height: 60px;
-    padding: 10px;
-    background: #f1f3f5;
   }
 
   .btn-modal {
@@ -10940,22 +10980,22 @@ body {
     width: 200px;
   }
 
-  #offerModal .modal-body {
+  .offerModal .modal-body {
     bottom: 0;
   }
 
-  #offerModal img {
+  .offerModal img {
     text-align: center;
     margin: 1rem auto;
     display: block;
     float: none;
   }
 
-  #offerModal .mentions {
+  .offerModal .mentions {
     margin-top: 1.5rem;
   }
 
-  #offerModal .modal-body .card-title {
+  .offerModal .modal-body .card-title {
     margin-top: 1rem;
   }
 }
@@ -11012,6 +11052,16 @@ h5 {
 
 #maps-list {
   margin-top: 1.8rem;
+}
+
+.invalid-feedback {
+  font-size: 90%;
+  font-style: oblique;
+}
+
+.was-validated .form-check-input:valid ~ .form-check-label,
+.form-check-input.is-valid ~ .form-check-label {
+  color: inherit;
 }
 
 @media (max-width: 768px) {
