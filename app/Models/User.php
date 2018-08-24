@@ -31,6 +31,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    protected $dateFormat = 'd-m-y H:i:s';
+
     public function company()
     {
         return $this->hasOne(Company::class, 'company_id', 'company_id');

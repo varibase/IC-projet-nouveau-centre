@@ -21,8 +21,15 @@ Route::get('/lang/{lang?}',[
 
 Route::get('/offer/{offerid}', 'OfferController@show');
 
+// attention check auth
+Route::get('/mycard', 'MyCardController@show');
+
 Route::get('/register', 'RegistrationController@create');
 Route::post('/register/{location}', 'UsersController@register');
+
+Route::get('/loginstep1', 'UsersController@loginstep1');
+Route::post('/loginstep2', 'UsersController@loginstep2');
+Route::post('/login', 'UsersController@login');
 
 Route::get('/user/confirm/{confirmationCode}', 'UsersController@confirm');
 Route::post('/user/password', 'UsersController@password');

@@ -41,4 +41,10 @@
 
     @include('partials.modals')
 
+    @if (session('popin'))
+        <input id="showpopin" type="hidden" value="{{ session('popin') }}" >
+        <input id="popinurl" type="hidden" value="{{ session('popinurl') }}" >
+        <input id="popinaction" type="hidden" value="{{ session('popinaction') }}" >
+    @endif
+
 @endsection

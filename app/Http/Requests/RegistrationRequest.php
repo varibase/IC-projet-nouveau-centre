@@ -29,16 +29,17 @@ class RegistrationRequest extends FormRequest
             'first_name' => 'required|max:50',
             'last_name' => 'required|max:50',
             'email' => 'required|email|unique:users',
-            'phone' => 'numeric',
+            'phone' => '',
             'company' => 'max:50',
             'lang' => 'required|in:fr,en',
-            'optin' => 'required',
-            'terms' => 'required'
+            'optin' => '',
+            'terms' => ''
         ];
     }
 
     public function registerUser($location)
     {
+
         $confirmation_code = str_random(30);
         $user = User::create([
             'first_name' => $this->first_name,

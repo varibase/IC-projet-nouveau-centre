@@ -2,8 +2,10 @@
     <div class="row">
         <div class="col">
             <h1>@lang('pages.register.titre')</h1>
+            <div id="result"></div>
+            <div id="errors"></div>
 
-            <form id="call2actionform" class="needs-validation" novalidate method="post" action="/register/{{ session('location') }}">
+            <form id="call2actionform" class="needs-validation" novalidate method="post" data-action="/register/{{ session('location') }}">
                 @csrf
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
@@ -39,7 +41,10 @@
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
                             <label for="phone">@lang('pages.register.phone')</label>
-                            <input type="text" class="form-control" name="phone" id="phone">
+                            <input type="text" class="form-control" name="phone" id="phone" placeholder="+1(999)-999-9999" pattern="[\+]\d(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}">
+                            <div class="invalid-feedback">
+                                @lang('pages.formerrors.phone')
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -102,16 +107,6 @@
                     </div>
                 </div>
             </form>
-
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
         </div>
     </div>
 </div>

@@ -46,6 +46,9 @@ function responsiveness(){
 
 $(window).ready(function(){
     responsiveness();
+
+    if ($('#showpopin').val() != undefined)
+        ShowModal2($('#showpopin').val(), $('#popinurl').val(), $('#popinaction').val());
 });
 
 $(window).resize(function(){
@@ -60,7 +63,6 @@ $('#icon-map > i').on('click',function(){
 });
 
 $('#icon-list > i').on('click',function(){
-
     $("#maps-list").fadeOut('fast');
     $("#icon-list").hide();
     $("#regular-list").fadeIn('slow');
@@ -70,37 +72,155 @@ $('#icon-list > i').on('click',function(){
 // animations:
 AOS.init();
 
-// modals :
-$('.modal').on('show.bs.modal', function (e) {
+//modals :
+var ModalOptions = {
+    'register' : {
+        class  : "",
+        dialog : "modal-lg",
+        footer : 1
+    },
+    'profile' : {
+        class  : "",
+        dialog : "modal-lg",
+        footer : 1
+    },
+    'confirm' : {
+        class  : "",
+        dialog : "modal-lg",
+        footer : 1
+    },
+    'loginstep1': {
+        class  : "",
+        dialog : "modal-sm",
+        footer : 1
+    },
+    'password': {
+        class  : "",
+        dialog : "modal-sm",
+        footer : 1
+    },
+    'mycard': {
+        class  : "cardModal d-lg-none d-md-none",
+        dialog : "modal-lg",
+        footer : 0
+    },
+    'offer':{
+        class  : "offerModal",
+        dialog : "modal-lg",
+        footer : 0
+    }
+};
+
+$(document).on("click",".toggle-modal", function(event){
+    event.preventDefault();
+    event.stopPropagation();
     
+    ShowModal2($(this).data('modaltype'), $(this).attr('href'), $(this).data('action'));
+  });
+
+// modals :
+/* CE N EST PLUS NECESSAIRE
+function ShowModal(modal, e) {
     var $modalParams = $(e.relatedTarget);
-    var $modal = $(this);
+    var $modal = modal;
 
     $modal.find('.modal-body').html("");
 
     $modal.addClass($modalParams.data('class'));
 
+    $modal.find('.modal-dialog').removeClass("modal-lg modal-sm").addClass($modalParams.data('dialog'));
+
     if ( $modalParams.data('footer') == 1 ) {
         $modal.find('.modal-footer').show();
-        $modal.find('#call2action').html($modalParams.data('action')); 
+        $modal.find('#call2action').html($modalParams.data('action'));
+        $('#call2action').show();
+        $('#call2action').prop('disabled', false);
     } else {
-        $modal.find('.modal-footer').hide();
+        $modal.find('#call2action').hide();
     }
 
     $modal.find('.modal-body').load(e.relatedTarget.href);
+}
+*/
+
+function ShowModal2(modal, href, action) {
+
+    $('.modal-body').html("");
+
+    $('#actionModal').addClass(ModalOptions[modal].class);
+
+    $('.modal-dialog').removeClass("modal-lg modal-sm").addClass(ModalOptions[modal].dialog);
+
+    if ( ModalOptions[modal].footer == 1 ) {
+        $('.modal-footer').show();
+        $('#call2action').html(action);
+        $('#call2action').show();
+        $('#call2action').prop('disabled', false);
+    } else {
+        $('.modal-footer').hide();
+    }
+
+    $('.modal-body').load(href);
+    $('#actionModal').modal('show');
+}
+
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
 });
 
 $('#call2action').on('click',function(event){
 
     var forms = $('#call2actionform');
+    $('#errors').hide();
 
     var validation = Array.prototype.filter.call(forms, function(form) {
 
         if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
+            event.preventDefault();
+            event.stopPropagation();
         } else {
-           // $('#call2actionform').submit();
+            $('#call2action').prop('disabled', true);
+
+            $.ajax({
+                url: $('#call2actionform').data('action'),
+                type: 'post',
+                dataType: 'json',
+                data: $('#call2actionform').serialize(),
+                success: function(response) {
+
+                    if (response.success) {
+
+                        if (response.msg) {
+                            $("#call2actionform").fadeOut('slow');
+                            $('#call2action').fadeOut('slow');
+                            $("#result").html( response.msg).fadeIn('slow');
+                        }
+
+                        if (response.view) {
+                            $('.modal-body').html(response.view).fadeIn('slow');
+                            $('#call2action').html(response.action).fadeIn('slow');
+                            $('#call2action').prop('disabled', false);
+                        }
+                    } else {
+                        $('#call2action').prop('disabled', false);
+                        $("#errors").html( response.msg).fadeIn('slow');
+                    }
+                },
+                error: function (request, status, error) {
+                    json = $.parseJSON(request.responseText);
+ 
+                    $.each(json.errors, function(key, value){
+                        $('#errors').append('<p>'+value+'</p>');
+                    });
+                    $('#errors').fadeIn('slow');
+                    $("#result").hide();
+                    $('#call2action').prop('disabled', false);
+                }
+            });
+
+            event.preventDefault();
         }
         form.classList.add('was-validated');
     });

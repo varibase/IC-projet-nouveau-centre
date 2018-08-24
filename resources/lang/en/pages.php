@@ -1,13 +1,14 @@
 <?php
 
-
 return [
     'switch-lang' => 'fr',
 
     'navbar'      => [
         'projet' => 'PROJET NOUVEAU CENTRE',
-        'devenir-membre' => 'DEVENIR MEMBRE',
-        'espace-membre' => 'ESPACE MEMBRE'
+        'devenir-membre' => 'Devenir membre',
+        'espace-membre' => 'ESPACE MEMBRE',
+        'motdepasse-oublie' => "Mot de passe oublié",
+        'ma-carte' => "Ma Carte"
     ],
     
     'home'       => [
@@ -34,13 +35,32 @@ return [
         'langEN'    => 'English',
         'terms'    => "J'accepte les conditions d'utilisation",
         'optin'    => "J'accepte de recevoir des communications de la part d'Invahoé Cambridge",
+        'success'   => "Votre inscription a bien été prise en compte. Merci de vérifier vos emails."
+    ],
+
+    'login1'       => [
+        'titre'    => 'Espace Membre',
+        'button'    => 'SUIVANT',
+    ],
+    'login2'       => [
+        'titre'    => 'Espace Membre',
+        'button'    => 'CONNEXION',
+        'password'  =>  "Mot de passe",
+        "emailerror"=>  "Vous n'êtes pas inscrit ou votre email n'est pas confirmé",
+        "passerror"=>  "Ce mot de passe est incorrect"
     ],
 
     'formerrors'       => [
         'firstname'    => "Merci d'indiquer votre prénom",
         'lastname'    => "Merci d'indiquer votre nom",
         'email'        => "Merci d'indiquer une adresse email valide",
-        'terms'         => "Vous devez accepter les CGU"
+        'phone'         => "Le numéro de mobile doit respecter ce format : +1(999)-999-9999",
+        'terms'         => "Vous devez accepter les CGU",
+        'password'      => "Merci d'indiquer votre mot de passe"
+    ],
+
+    'mycard'       => [
+        'titre'    => 'Ma Carte'
     ],
 
     'footer'      => [

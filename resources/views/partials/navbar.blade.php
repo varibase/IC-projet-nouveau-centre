@@ -14,11 +14,16 @@
                             <a class="nav-link" href="/">@lang('pages.navbar.projet')</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/register" data-toggle="modal" data-target="#actionModal" data-action="@lang('pages.register.button')" data-footer="1">@lang('pages.navbar.devenir-membre')</a>
+                            <a class="nav-link toggle-modal" href="/register" data-modaltype="register" data-action="@lang('pages.register.button')">@lang('pages.navbar.devenir-membre')</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-target="#actionModal" data-footer="1">@lang('pages.navbar.espace-membre')</a>
+                            <a class="nav-link toggle-modal" href="/loginstep1" data-modaltype="loginstep1" data-action="@lang('pages.login1.button')" >@lang('pages.navbar.espace-membre')</a>
                         </li>
+
+                        <li class="nav-item d-lg-none d-md-none">
+                            <a class="nav-link toggle-modal" href="/mycard" data-modaltype="mycard">@lang('pages.navbar.ma-carte')</a>
+                        </li>
+
                         <li class="nav-item langues">
                             <a class="nav-link" href="{{route('lang.switch',['lang'=> __('pages.switch-lang') ])}}">@lang('pages.switch-lang')</a>
                         </li>

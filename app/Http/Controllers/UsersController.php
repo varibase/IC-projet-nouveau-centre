@@ -8,10 +8,11 @@ use App\Models\Location;
 use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Auth;
+use Validator;
 
 class UsersController extends Controller
 {
-    public function confirm($confirmationCode)
+    public function confirm($confirmationCode, Request $request)
     {
         if(!$confirmationCode)
         {
@@ -25,9 +26,11 @@ class UsersController extends Controller
             return redirect()->home();
         }
 
-
-
-        return view('confirm', compact('user'));
+        if($request->ajax()){
+            return view('confirm', compact('user'));
+        } else {
+            return redirect()->home()->with(['popin' => 'confirm', 'popinurl' => url()->full(), 'popinaction' => __('pages.confirm.button')] );
+        }
     }
 
     public function password(Request $request)
@@ -56,9 +59,46 @@ class UsersController extends Controller
         //Login the user
     }
 
-    public function login()
+    public function loginstep1()
     {
+        return view('member.login1');
+    }
 
+    public function loginstep2(Request $request)
+    {
+        $user = User::where('email', $request->email)->where('confirmed', 1)->first();
+
+        if(!$user)
+        {
+            return response()->json([
+                'success'  => false,
+                'msg'      =>  __('pages.login2.emailerror')
+            ]);
+
+        } else {
+            return response()->json([
+                'success'  => true,
+                'view'     =>  view('member.login2', ['email' => $request->email])->render(),
+                "action"   => __('pages.login2.button')
+            ]);
+        }
+    }
+
+    public function login(Request $request) {
+
+        if(Auth::attempt(['email' => $request->email, 'password' => $request->password]))
+        {
+            //dd("User Authenticated");
+            // reload menu etc.
+            return redirect()->home();
+        }
+        else
+        {
+            return response()->json([
+                'success'  => false,
+                'msg'      =>  __('pages.login2.passerror')
+            ]);
+        }
     }
 
     public function logout()
@@ -68,6 +108,7 @@ class UsersController extends Controller
 
     public function register(RegistrationRequest $request, Location $location)
     {
+        
         $user = $request->registerUser($location);
 
         Mail::send('email.confirm',['confirmation_code' => $user->confirmation_code], function($message) {
@@ -75,10 +116,10 @@ class UsersController extends Controller
                 ->subject('Verify your email address');
         });
 
-        //Flash a message to the session "Check your emails..."
-
-        return redirect()->home();
-
+        return response()->json([
+            'success'   => true,
+            'msg'       => __('pages.register.success')
+        ]);
     }
 
     public function update()

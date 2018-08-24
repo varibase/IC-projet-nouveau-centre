@@ -8,6 +8,8 @@ class Company extends Model
     protected $table = 'companies';
     protected $primaryKey = 'company_id';
 
+    protected $dateFormat = 'd-m-y H:i:s';
+
     public function users()
     {
         return $this->hasMany(User::class, 'company_id', 'company_id');

@@ -10,14 +10,20 @@ class RegistrationController extends Controller
 {
     public function create(Request $request)
     {
-        return view('registration.create');
+        if($request->ajax()){
+            return view('registration.create');
+
+        } else {
+            return redirect()->home()->with(['popin' => 'register', 'popinurl' => url()->full(), 'popinaction' => __('pages.register.button')] );
+        }
     }
 
     public function store(RegistrationRequest $request)
     {
-
+        $validated = $request->validated();
         $user = $request->registerUser();
-        dd($user);
+        //dd($user);
+        
     }
 
     public function confirm()
