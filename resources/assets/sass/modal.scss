@@ -87,6 +87,7 @@ html, body {
     background: #fff url('/img/icons/select_icon.png') no-repeat right 0.75rem center;
 }
 
+
 #call2action {
     background: #000000;
     border-radius:0px;
@@ -127,6 +128,7 @@ html, body {
         position: fixed;
         margin: 0;
         width: 100%;
+        max-width: 100%;
         height: 100%;
         padding: 0;
     }
@@ -209,6 +211,9 @@ html, body {
 
     .offerModal .modal-body .card-title {
         margin-top: 1rem;
+    }
+    #call2actionform {
+        margin-bottom:30px;
     }
     
 }
