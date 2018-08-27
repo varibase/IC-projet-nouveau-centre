@@ -49,24 +49,34 @@ class UsersController extends Controller
 
         if(Auth::attempt(['email' => $user->email, 'password' => $request->password]))
         {
-            dd("User Authenticated");
+            return response()->json([
+                'success'  => true,
+                'msg'      =>  __('pages.confirm.success'),
+                'refresh'  => true
+            ]);
         }
         else
         {
-            dd("Authentication Failed");
+            return response()->json([
+                'success'  => false,
+                'msg'      =>  __('pages.formerrors.generalerror')
+            ]);
         }
 
-        //Login the user
     }
 
-    public function loginstep1()
+    public function loginstep1(Request $request)
     {
-        return view('member.login1');
+        if($request->ajax()){
+            return view('member.login1');
+        } else {
+            return redirect()->home()->with(['popin' => 'loginstep1', 'popinurl' => url()->full(), 'popinaction' => __('pages.login1.button')] );
+        }
     }
 
     public function loginstep2(Request $request)
     {
-        $user = User::where('email', $request->email)->where('confirmed', 1)->first();
+        $user = User::where('email', $request->email)->first();
 
         if(!$user)
         {
@@ -76,11 +86,28 @@ class UsersController extends Controller
             ]);
 
         } else {
-            return response()->json([
-                'success'  => true,
-                'view'     =>  view('member.login2', ['email' => $request->email])->render(),
-                "action"   => __('pages.login2.button')
-            ]);
+
+            if ($user->confirmed) {
+
+                return response()->json([
+                    'success'  => true,
+                    'view'     =>  view('member.login2', ['email' => $request->email])->render(),
+                    "action"   => __('pages.login2.button')
+                ]);
+
+            } else {
+
+                Mail::send('email.confirm', ['confirmation_code' => $user->confirmation_code, 'user' => $user], 
+                    function($message) use ($user) {
+                        $message->to($user->email, $user->first_name." ".$user->last_name)
+                            ->subject('Verify your email address');
+                });
+
+                return response()->json([
+                    'success'  => false,
+                    'msg'      =>  __('pages.login2.confirmerror')
+                ]);
+            }
         }
     }
 
@@ -88,9 +115,11 @@ class UsersController extends Controller
 
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password]))
         {
-            //dd("User Authenticated");
-            // reload menu etc.
-            return redirect()->home();
+            return response()->json([
+                'success'  => true,
+                'msg'      =>  __('pages.login2.success'),
+                'refresh'  => true
+            ]);
         }
         else
         {
@@ -103,6 +132,8 @@ class UsersController extends Controller
 
     public function logout()
     {
+        Auth::logout();
+        return redirect()->home();
 
     }
 

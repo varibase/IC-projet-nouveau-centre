@@ -31,7 +31,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    protected $dateFormat = 'd-m-y H:i:s';
+    protected $dateFormat = 'Y-d-m H:i:s.000'; 
 
     public function company()
     {
@@ -92,11 +92,13 @@ class User extends Authenticatable
         $this->confirmed = 1;
         $this->confirmation_code = null;
         $this->password = Hash::make($password);
-        if($this->optin->optin == 2 && $this->optin->optout == 0)
+
+        if($this->optin && $this->optin->optin == 2 && $this->optin->optout == 0)
         {
             $this->optin->optin = 1;
             $this->optin->save();
         }
+        
         $this->save();
     }
 }

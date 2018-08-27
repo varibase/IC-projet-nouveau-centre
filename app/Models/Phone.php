@@ -7,7 +7,7 @@ class Phone extends Model
     protected $table = 'phones';
     protected $primaryKey = 'phone_id';
 
-    protected $dateFormat = 'd-m-y H:i:s';
+    protected $dateFormat = 'Y-d-m H:i:s.000';
 
     public function user()
     {

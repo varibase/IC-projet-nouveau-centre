@@ -7,7 +7,7 @@ class Optin extends Model
     protected $table = 'optins';
     protected $primaryKey = 'optin_id';
 
-    protected $dateFormat = 'd-m-y H:i:s';
+    protected $dateFormat = 'Y-d-m H:i:s.000';
 
     public function user()
     {

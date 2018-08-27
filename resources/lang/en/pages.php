@@ -8,6 +8,8 @@ return [
         'devenir-membre' => 'Devenir membre',
         'espace-membre' => 'ESPACE MEMBRE',
         'motdepasse-oublie' => "Mot de passe oublié",
+        "profil"    => "PROFIL",
+        "deconnexion" => "Déconnexion",
         'ma-carte' => "Ma Carte"
     ],
     
@@ -35,7 +37,7 @@ return [
         'langEN'    => 'English',
         'terms'    => "J'accepte les conditions d'utilisation",
         'optin'    => "J'accepte de recevoir des communications de la part d'Invahoé Cambridge",
-        'success'   => "Votre inscription a bien été prise en compte. Merci de vérifier vos emails."
+        'success'   => "Votre inscription a bien été prise en compte. Merci de vérifier vos emails afin de confirmer votre inscription"
     ],
 
     'login1'       => [
@@ -46,8 +48,24 @@ return [
         'titre'    => 'Espace Membre',
         'button'    => 'CONNEXION',
         'password'  =>  "Mot de passe",
-        "emailerror"=>  "Vous n'êtes pas inscrit ou votre email n'est pas confirmé",
-        "passerror"=>  "Ce mot de passe est incorrect"
+        "emailerror"=>  'Vous n\'êtes pas encore membre du projet Nouveau Centre : <br><a class="toggle-modal" href="/register" data-modaltype="register" data-action="DEVENIR MEMBRE">Devenir membre</a>',
+        "confirmerror" => "Votre inscription n'est pas confimée. <br>Nous venons de vous renvoyer un email de demande de confirmation.",
+        "passerror"=>  "Ce mot de passe est incorrect.",
+        "success" => "Vous êtes connecté à votre espace membre."
+    ],
+
+    'confirm'       => [
+        'titre'    => 'Espace Membre',
+        'soustitre' => "Votre inscription est confirmée. Veuillez choisir un mot de passe",
+        'button'    => 'CONFIRMER',
+        'password'  => "Mot de passe",
+        'confirm-password'  => "Confirmation",
+        'success' => "Votre inscription est maintenant terminée."
+    ],
+
+    'forgot'       => [
+        'titre'    => 'Espace Membre',
+        'button'    => 'SUIVANT',
     ],
 
     'formerrors'       => [
@@ -56,7 +74,9 @@ return [
         'email'        => "Merci d'indiquer une adresse email valide",
         'phone'         => "Le numéro de mobile doit respecter ce format : +1(999)-999-9999",
         'terms'         => "Vous devez accepter les CGU",
-        'password'      => "Merci d'indiquer votre mot de passe"
+        'password'      => "Merci d'indiquer votre mot de passe",
+        'password-length' => "Votre mot de passe doit être composé de 4 à 12 caractères",
+        'generalerror'  => "Une erreur est survenue."
     ],
 
     'mycard'       => [
