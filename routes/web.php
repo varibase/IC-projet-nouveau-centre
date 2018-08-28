@@ -21,8 +21,6 @@ Route::get('/lang/{lang?}',[
 
 Route::get('/offer/{offerid}', 'OfferController@show');
 
-Route::get('/mycard', 'MyCardController@show');
-
 Route::get('/register', 'RegistrationController@create')->name('register');
 Route::post('/register/{location}', 'UsersController@register');
 
@@ -42,3 +40,8 @@ Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail
 
 Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('/password/reset', 'Auth\ResetPasswordController@reset');
+
+//Auth:
+Route::get('/mycard', 'MyCardController@show');
+Route::get('/profile', 'ProfileController@show');
+Route::post('/update', 'ProfileController@update')->name('profile.update');

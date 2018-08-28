@@ -11,7 +11,7 @@ class RegistrationController extends Controller
     public function create(Request $request)
     {
         if($request->ajax()){
-            return view('registration.create');
+            return view('registration.create')->with('registration', true);
 
         } else {
             return redirect()->home()->with(['popin' => 'register', 'popinurl' => url()->full(), 'popinaction' => __('pages.register.button')] );

@@ -39,6 +39,11 @@ return [
         'optin'    => "J'accepte de recevoir des communications de la part d'Invahoé Cambridge",
         'success'   => "Votre inscription a bien été prise en compte. Merci de vérifier vos emails afin de confirmer votre inscription"
     ],
+    'profile'       => [
+        'titre'    => 'Profil',
+        'button'    => 'ENREGISTRER',
+        'success'   => "Votre profil a bien été mis à jour"
+    ],
 
     'login1'       => [
         'titre'    => 'Espace Membre',
