@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Card;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\User;
 use View;
 
 class MyCardController extends Controller
@@ -15,7 +17,8 @@ class MyCardController extends Controller
 
     public function show(Request $request)
     {
-        return view('mycard');
+        $user = Auth::user();
+        return view('mycard', compact('user'));
     }
 
 }
