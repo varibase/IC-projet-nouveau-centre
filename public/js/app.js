@@ -13780,7 +13780,7 @@ var ModalOptions = {
     },
     'confirm': {
         class: "",
-        dialog: "modal-lg",
+        dialog: "modal-sm",
         footer: 1
     },
     'loginstep1': {
@@ -13788,13 +13788,18 @@ var ModalOptions = {
         dialog: "modal-sm",
         footer: 1
     },
-    'password': {
+    'passwordreset': {
+        class: "",
+        dialog: "modal-sm",
+        footer: 1
+    },
+    'passwordchange': {
         class: "",
         dialog: "modal-sm",
         footer: 1
     },
     'mycard': {
-        class: "cardModal d-lg-none d-md-none",
+        class: "cardModal",
         dialog: "modal-lg",
         footer: 0
     },
@@ -13811,31 +13816,6 @@ $(document).on("click", ".toggle-modal", function (event) {
 
     ShowModal2($(this).data('modaltype'), $(this).attr('href'), $(this).data('action'));
 });
-
-// modals :
-/* CE N EST PLUS NECESSAIRE
-function ShowModal(modal, e) {
-    var $modalParams = $(e.relatedTarget);
-    var $modal = modal;
-
-    $modal.find('.modal-body').html("");
-
-    $modal.addClass($modalParams.data('class'));
-
-    $modal.find('.modal-dialog').removeClass("modal-lg modal-sm").addClass($modalParams.data('dialog'));
-
-    if ( $modalParams.data('footer') == 1 ) {
-        $modal.find('.modal-footer').show();
-        $modal.find('#call2action').html($modalParams.data('action'));
-        $('#call2action').show();
-        $('#call2action').prop('disabled', false);
-    } else {
-        $modal.find('#call2action').hide();
-    }
-
-    $modal.find('.modal-body').load(e.relatedTarget.href);
-}
-*/
 
 function ShowModal2(modal, href, action) {
 
@@ -13896,6 +13876,13 @@ $('#call2action').on('click', function (event) {
                             $('.modal-body').html(response.view).fadeIn('slow');
                             $('#call2action').html(response.action).fadeIn('slow');
                             $('#call2action').prop('disabled', false);
+                        }
+
+                        if (response.refresh) {
+                            $('p').hide();
+                            setTimeout(function () {
+                                window.location.reload();
+                            }, 2000);
                         }
                     } else {
                         $('#call2action').prop('disabled', false);

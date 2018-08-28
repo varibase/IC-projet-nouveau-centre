@@ -53,7 +53,7 @@
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
                             <label for="company">@lang('pages.register.company')</label>
-                            <select class="form-control custom-select" name="company" id="company">
+                            <select class="form-control" name="company" id="company" style="width: 100%">
                                 <option>@lang('pages.register.companylist.1')</option>
                                 <option>@lang('pages.register.companylist.2')</option>
                                 <option>@lang('pages.register.companylist.3')</option>
@@ -110,3 +110,15 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $("#company").select2({
+            dropdownParent: $('.modal'),
+            width:'resolve',
+            tags: true,
+            selectOnClose: true
+        });
+    });
+</script>

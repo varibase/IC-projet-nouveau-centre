@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);@font-face {
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);@import url(https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text);@font-face {
   font-family: GauthierFY;
   src: url("/css/fonts/GauthierFY.otf") format("opentype");
   font-weight: 400;
@@ -10935,6 +10935,30 @@ body {
   margin-bottom: 1.5rem;
 }
 
+#actionModal .select2-container--default .select2-selection--single {
+  border: none;
+  border-radius: 0;
+  height: calc(2.19rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+#actionModal .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: #000 transparent transparent transparent;
+  border-style: solid;
+  border-width: 8px 7px 0 7px;
+  margin-left: -12px;
+  margin-top: 0;
+}
+
+#actionModal .select2-container--open .select2-dropdown--above,
+#actionModal .select2-container--open .select2-dropdown--below {
+  border-bottom: none;
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 1px 10px rgba(0, 0, 0, 0.7);
+}
+
 @media (max-width: 767.99px) {
   .modal {
     position: fixed;
@@ -10949,6 +10973,7 @@ body {
     position: fixed;
     margin: 0;
     width: 100%;
+    max-width: 100%;
     height: 100%;
     padding: 0;
   }
@@ -11035,6 +11060,10 @@ body {
   .offerModal .modal-body .card-title {
     margin-top: 1rem;
   }
+
+  #call2actionform {
+    margin-bottom: 30px;
+  }
 }
 
 @media (min-width: 576px) {
@@ -11044,41 +11073,10 @@ body {
 }
 
 #macarte {
-  background: url("/img/fond-macarte-specimen.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top center;
   width: 100%;
   height: 100%;
   display: block;
-  height: 90% !important;
-}
-
-.myname {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  -webkit-transform-origin: left top 0;
-          transform-origin: left top 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  color: #000000;
-  font-size: 0.8rem;
-  position: absolute;
-  top: 15%;
-  left: 46%;
-}
-
-.mynumber {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  -webkit-transform-origin: left top 0;
-          transform-origin: left top 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #000000;
-  font-size: 0.9rem;
-  position: absolute;
-  top: 45%;
-  left: 23%;
+  height: 95% !important;
 }
 
 body {

@@ -63,9 +63,16 @@ return [
         'success' => "Votre inscription est maintenant terminée."
     ],
 
-    'forgot'       => [
-        'titre'    => 'Espace Membre',
+    'passwordreset'       => [
+        'titre'    => 'Mot de passe oublié',
         'button'    => 'SUIVANT',
+        "invaliduser"   => "Cette adresse email n'existe pas",
+        'success'   =>  "Un email de réinitialisation de mot de passe vous a été envoyé."
+    ],
+    'passwordchange'       => [
+        'titre'    => 'Réinitialiser votre mot de passe',
+        'button'    => 'SUIVANT',
+        'success'   => "Votre mot de passe a été mis à jour."
     ],
 
     'formerrors'       => [
