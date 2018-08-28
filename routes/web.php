@@ -21,10 +21,9 @@ Route::get('/lang/{lang?}',[
 
 Route::get('/offer/{offerid}', 'OfferController@show');
 
-// attention check auth
 Route::get('/mycard', 'MyCardController@show');
 
-Route::get('/register', 'RegistrationController@create');
+Route::get('/register', 'RegistrationController@create')->name('register');
 Route::post('/register/{location}', 'UsersController@register');
 
 Route::get('/loginstep1', 'UsersController@loginstep1')->name('login');
@@ -37,3 +36,9 @@ Route::post('/user/password', 'UsersController@password');
 Route::get('/logout', 'UsersController@logout');
 
 Route::get('/maps', 'IndexController@maps');
+
+Route::get('/password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+
+Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+Route::post('/password/reset', 'Auth\ResetPasswordController@reset');

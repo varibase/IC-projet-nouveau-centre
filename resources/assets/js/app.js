@@ -49,6 +49,7 @@ $(window).ready(function(){
 
     if ($('#showpopin').val() != undefined)
         ShowModal2($('#showpopin').val(), $('#popinurl').val(), $('#popinaction').val());
+
 });
 
 $(window).resize(function(){
@@ -94,13 +95,18 @@ var ModalOptions = {
         dialog : "modal-sm",
         footer : 1
     },
-    'forgot': {
+    'passwordreset': {
+        class  : "",
+        dialog : "modal-sm",
+        footer : 1
+    },
+    'passwordchange': {
         class  : "",
         dialog : "modal-sm",
         footer : 1
     },
     'mycard': {
-        class  : "cardModal d-lg-none d-md-none",
+        class  : "cardModal",
         dialog : "modal-lg",
         footer : 0
     },
