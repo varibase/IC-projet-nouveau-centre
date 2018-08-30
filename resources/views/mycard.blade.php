@@ -12,7 +12,7 @@
                                 y="11.287775"
                                 x="-0.037804745"
                                 id="image27"
-                                xlink:href="https://www.nouveaucentre.local/img/fond-macarte.png"
+                                xlink:href="/img/fond-macarte.png"
                                 preserveAspectRatio="none"
                                 height="286.27917"
                                 width="181.50417" />
