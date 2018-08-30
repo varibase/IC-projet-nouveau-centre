@@ -26,5 +26,6 @@
 <script src="/js/app.js"></script>
 <script type="text/javascript" src="/js/markerclusterer/markerclusterer.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script type="text/javascript" src="/js/vanillaTextMask.js"></script>
 </body>
 </html>

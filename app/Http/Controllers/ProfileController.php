@@ -17,14 +17,19 @@ class ProfileController extends Controller
 
     public function show()
     {
-        $user = Auth::user();
-        return view('registration.create', compact('user'))->with('registration', false);
+        $user   = Auth::user();
+
+        $params = (object) [    "registration" => false,
+                                "route" => route('profile.update'),
+                                "fieldAttribute" => "disabled",
+                                "language" => $user->lang ];
+
+        return view('registration.create', compact('user', 'params'));
     }
 
     public function update(ProfileRequest $request)
     {
-        $user = Auth::user();
-        $request->updateUser($user);
+        $request->updateUser();
 
         return response()->json([
             'success'   => true,
