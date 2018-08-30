@@ -21,9 +21,10 @@ body{
   font-family: Arial, sans-serif;
 }
 
-a, a:focus, a:active {
+a, a:focus, a:active, button:focus {
 	outline: none;
 }
+
 .btn-dark:not(:disabled):not(.disabled):active:focus, 
 .btn-dark:not(:disabled):not(.disabled).active:focus, 
 .show > .btn-dark.dropdown-toggle:focus,

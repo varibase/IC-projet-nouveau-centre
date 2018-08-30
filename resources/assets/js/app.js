@@ -213,3 +213,4 @@ $('#call2action').on('click',function(event){
         form.classList.add('was-validated');
     });
 });
+

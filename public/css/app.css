@@ -11086,7 +11086,8 @@ body {
 
 a,
 a:focus,
-a:active {
+a:active,
+button:focus {
   outline: none;
 }
 

@@ -32,7 +32,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    protected $dateFormat = 'Y-d-m H:i:s.000'; 
+    protected $dateFormat = 'Y-d-m H:i:s.000';
 
     public function company()
     {
