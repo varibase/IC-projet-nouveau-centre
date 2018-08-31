@@ -20,8 +20,7 @@ class Card extends Model
     }
 
     public static function assignNewDigital($user_id)
-    { 
-        /*
+    {
         $card = Card::where([
             ['user_id', '=', null],
             ['type_id', '=', '1']
@@ -29,11 +28,7 @@ class Card extends Model
 
         $card->user_id = $user_id;
         $card->save();
-*/
-        $card = Card::create([
-            'user_id' => $user_id,
-            'type_id' => '1'
-        ]);
+
 
         return $card;
     }
