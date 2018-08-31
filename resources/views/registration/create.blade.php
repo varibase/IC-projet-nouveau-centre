@@ -55,9 +55,24 @@
                         <div class="form-group">
                             <label for="company">@lang('pages.register.company')</label>
                             <select class="form-control" name="company" id="company" style="width: 100%">
-                                <option>@lang('pages.register.companylist.1')</option>
-                                <option>@lang('pages.register.companylist.2')</option>
-                                <option>@lang('pages.register.companylist.3')</option>
+                                @if ($params->registration)
+                                    <option selected disabled></option>
+                                @endif
+                                @foreach($companies as $company)
+                                    <option
+                                            @isset($user->company->name)
+                                                @if($user->company->name == $company->name)
+                                                    selected
+                                                    @php $checked = true @endphp
+                                                @endif
+                                            @endisset
+                                    >{{ $company->name }}</option>
+                                @endforeach
+                                @empty($checked)
+                                    @isset($user->company->name)
+                                        <option selected>{{ $user->company->name }}</option>
+                                    @endisset
+                                @endif
                             </select>
                         </div>
                     </div>
