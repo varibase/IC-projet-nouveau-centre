@@ -20,10 +20,11 @@
                     <a class="icons" id="icon-map">
                         <i class="imap"></i>
                     </a>
+                    {{--
                     <a class="icon" id="icon-filter">
                         <i class="ifilter"></i>
                     </a>
-
+                    --}}
                 </div>
 
             </div>
