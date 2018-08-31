@@ -19,6 +19,11 @@ class Offer extends Model
 
     public function info()
     {
-        return $this->hasOne(OfferInfo::class, 'offer_id', 'offer_id');
+        return $this->hasMany(OfferInfo::class, 'offer_id', 'offer_id');
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'offer_id';
     }
 }

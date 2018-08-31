@@ -19,7 +19,7 @@ Route::get('/lang/{lang?}',[
     'as'  => 'lang.switch'
 ]);
 
-Route::get('/offer/{offerid}', 'OfferController@show');
+Route::get('/offer/{offer}', 'OfferController@show');
 
 Route::get('/register', 'RegistrationController@create')->name('register');
 Route::post('/register/{location}', 'UsersController@register');

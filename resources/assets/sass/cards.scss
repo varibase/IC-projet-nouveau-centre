@@ -78,3 +78,9 @@
   }
 
 }
+
+@media (min-width: 575px) {
+  div.card-text{
+    min-height:260px;
+  }
+}
