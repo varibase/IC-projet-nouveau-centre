@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Card;
 use Illuminate\Http\Request;
+use App\Models\Location;
 use Mapper;
 
 class IndexController extends Controller
@@ -22,12 +23,49 @@ class IndexController extends Controller
 
     public function home()
     {
-        
-        Mapper::map(45.5026173, -73.5710181, ['eventClick' => "ShowOffer(1)"]);
-        Mapper::marker(45.500401755372756, -73.56759164536902, ['eventClick' => "ShowOffer(2)"]);
-        Mapper::marker(45.50062547156453, -73.56779549325415, ['eventClick' => "ShowOffer(3)"]);
-        Mapper::marker(45.50058223236988, -73.56785181964347, ['eventClick' => "ShowOffer(4)"]);
+        if(\Auth::check())
+        {
+            $location = \Auth::user()->location;
+        }
+        else
+        {
+            $location = Location::where('shortname', session('location'))->first();
+        }
+        $offers = $location->group->offers()->get();
+        $i = 0;
+        foreach($offers as $offer)
+        {
+            if($i == 0)
+            {
+                Mapper::map($offer->partner->address->latitude, $offer->partner->address->longitude, ['eventClick' => "ShowOffer($offer->offer_id)"]);
+                $i++;
+            }
+            else
+            {
+                Mapper::marker($offer->partner->address->latitude, $offer->partner->address->longitude, ['eventClick' => "ShowOffer($offer->offer_id)"]);
+            }
+
+        }
         return view('home');
+    }
+
+    public function cards()
+    {
+        for($i=0; $i<5001;$i++)
+        {
+
+            $cardnum = random_bytes(8);
+            $cardnum = bin2hex($cardnum);
+            $cardnum = substr($cardnum, 0, 6);
+            $cardnum = "46".$cardnum;
+            $card = new Card();
+            $card->type_id = 1;
+            $card->card_number = $cardnum;
+            $card->save();
+
+        }
+
+        return $cardnum;
     }
 
     
