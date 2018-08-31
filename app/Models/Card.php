@@ -7,7 +7,7 @@ class Card extends Model
     protected $table = 'cards';
     protected $primaryKey = 'card_id';
 
-    protected $dateFormat = 'Y-d-m H:i:s.000';
+    //protected $dateFormat = 'Y-d-m H:i:s.000';
 
     public function user()
     {

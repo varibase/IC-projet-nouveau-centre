@@ -49,6 +49,13 @@ class UsersController extends Controller
 
         if(Auth::attempt(['email' => $user->email, 'password' => $request->password]))
         {
+
+            Mail::send('email.welcome', ['prenom' => $user->first_name], 
+            function($message) use ($user) {
+                $message->to($user->email, $user->first_name." ".$user->last_name)
+                    ->subject(__('emails.email-welcome.subject'));
+            });
+
             return response()->json([
                 'success'  => true,
                 'msg'      =>  __('pages.confirm.success'),
@@ -97,10 +104,10 @@ class UsersController extends Controller
 
             } else {
 
-                Mail::send('email.confirm', ['confirmation_code' => $user->confirmation_code, 'user' => $user], 
+                Mail::send('email.confirm', ['confirmation_code' => $user->confirmation_code, 'prenom' => $user->first_name], 
                     function($message) use ($user) {
                         $message->to($user->email, $user->first_name." ".$user->last_name)
-                            ->subject('Verify your email address');
+                            ->subject(__('emails.email-confirm.subject'));
                 });
 
                 return response()->json([
@@ -142,9 +149,10 @@ class UsersController extends Controller
         
         $user = $request->registerUser($location);
 
-        Mail::send('email.confirm',['confirmation_code' => $user->confirmation_code], function($message) {
-            $message->to(request()->email, request()->first_name." ".request()->last_name)
-                ->subject('Verify your email address');
+        Mail::send('email.confirm', ['confirmation_code' => $user->confirmation_code, 'prenom' => $user->first_name], 
+                function($message) use ($user) {
+                    $message->to($user->email, $user->first_name." ".$user->last_name)
+                        ->subject(__('emails.email-confirm.subject'));
         });
 
         return response()->json([

@@ -3,9 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Notifications\Notification;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Contracts\Auth\CanResetPassword;
+use App\Notifications\MailResetPasswordNotification;
 
 class User extends Authenticatable
 {
@@ -32,7 +34,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    protected $dateFormat = 'Y-d-m H:i:s.000';
+    //protected $dateFormat = 'Y-d-m H:i:s.000';
 
     public function company()
     {
@@ -102,4 +104,17 @@ class User extends Authenticatable
         
         $this->save();
     }
+
+   /**
+     * Send the password reset notification.
+     *
+     * @param  string $token
+     * @return void
+     */
+    
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new MailResetPasswordNotification($token));
+    }
+
 }

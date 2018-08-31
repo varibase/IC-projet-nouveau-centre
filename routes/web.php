@@ -45,6 +45,3 @@ Route::post('/password/reset', 'Auth\ResetPasswordController@reset');
 Route::get('/mycard', 'MyCardController@show');
 Route::get('/profile', 'ProfileController@show');
 Route::post('/update', 'ProfileController@update')->name('profile.update');
-
-
-Route::get('/bobby', 'MyCardController@bobby');

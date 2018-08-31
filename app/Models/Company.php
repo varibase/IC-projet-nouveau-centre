@@ -8,7 +8,7 @@ class Company extends Model
     protected $table = 'companies';
     protected $primaryKey = 'company_id';
 
-    protected $dateFormat = 'Y-d-m H:i:s.000';
+    //protected $dateFormat = 'Y-d-m H:i:s.000';
 
     public function users()
     {

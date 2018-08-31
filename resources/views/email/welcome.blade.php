@@ -10,8 +10,22 @@
                     </td>
                 </tr>
                 <tr>
+                    <td class="message" style="padding: 0px 110px 15px 110px; font-family: Arial, sans-serif; font-size: 15px; line-height: 22px; color: #000000; text-align: center;font-weight: normal;">
+                        <p style="margin: 0;"><multiline>@lang('emails.email-welcome.p1')</multiline></p>
+                    </td>
+                </tr>
+                <tr>
                     <td class="message" style="padding: 0px 100px 15px 100px; font-family: Arial, sans-serif; font-size: 15px; line-height: 22px; color: #000000; text-align: center;font-weight: normal;">
-                        <p style="margin: 0;"><multiline>@lang('emails.email-confirm.p')</multiline></p>
+                        <p style="margin: 0;"><multiline>@lang('emails.email-welcome.p2')</multiline></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" style="text-align: center;padding: 15px 15px 15px 15px;">
+                        <center>
+                            <a href="{{ config('app.url') }}" target="_blank">
+                                <img class="fluid" src="http://privileges.projetnouveaucentre.ca/img/emails/pnc-macarte.png" width="371" alt="@lang('emails.titre')" style="display: block; border: 0px;" />
+                            </a>
+                        </center>
                     </td>
                 </tr>
                 <tr>
@@ -26,7 +40,7 @@
                                                 <tbody>
                                                     <tr>
                                                         <td class="mcnButtonContent" style="font-family: Arial; font-size: 14px;padding-top:13px; padding-right:28px; padding-bottom:13px; padding-left:28px;" valign="middle" align="center">
-                                                            <a class="mcnButton " title="@lang('emails.email-confirm.button')" href="{{ URL::to('user/confirm/' . $confirmation_code) }}" target="_blank" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">@lang('emails.email-confirm.button')</a>
+                                                            <a class="mcnButton " title="@lang('emails.email-confirm.button')" href="{{ config('app.url') }}" target="_blank" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">@lang('emails.email-welcome.button')</a>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -44,17 +58,5 @@
         </table>
     </td>
 </tr>
-<!-- HELP CONFIRM -->
-<tr>
-    <td bgcolor="#d8d4d0">
-        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-            <tbody><tr>
-                <td class="message" style="padding: 30px 130px 15px 130px; font-family: Arial, sans-serif; font-size: 15px; line-height: 22px; color: #000000; text-align: center;font-weight:normal;">
-                    <p style="margin: 0;"><singleline>@lang('emails.email-confirm.help')</singleline></p>
-                </td>
-            </tr>
-        </tbody></table>
-    </td>
-</tr>
-<!-- HELP : END -->
+@include('email.partials.questions')
 @endsection
