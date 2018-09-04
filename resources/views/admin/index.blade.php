@@ -48,7 +48,11 @@
                                     data-company="{{ $user->company->name }}"
                                     data-lang="{{$user->lang}}"
                                     data-userid="{{ $user->user_id }}"
+                                    @if($user->card()->count())
                                     data-card="{{ $user->card->card_number }}"
+                                    @else
+                                    data-card=""
+                                    @endif
                                     data-email="{{ $user->email }}"
                                     id="user-{{$user->user_id}}"
                             >
