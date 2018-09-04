@@ -18,7 +18,7 @@
                                 width="181.50417" />
                         </g>
                         <text x="74" y="30" style="fill: #000000; stroke: none;font-family:Arial; font-size: 8px;font-weight:bold;writing-mode: tb;text-transform:uppercase;">{{ $user->first_name}} {{ $user->last_name}}</text>
-                        <text x="33" y="153" text-anchor="middle" alignment-baseline="middle" style="fill: #000000; stroke: none;font-family: 'Libre Barcode 128 Text', cursive; font-size: 40px;writing-mode: tb;">46A836EF</text>
+                        <text x="33" y="153" text-anchor="middle" alignment-baseline="middle" style="fill: #000000; stroke: none;font-family: 'Libre Barcode 128 Text', cursive; font-size: 40px;writing-mode: tb;">{{ $user->card->card_number }}</text>
                 </svg>
 
             </div>

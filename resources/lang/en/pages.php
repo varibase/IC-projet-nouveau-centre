@@ -1,98 +1,106 @@
 <?php
 
 return [
-    'switch-lang' => 'fr',
+    'switch-lang' => 'en',
 
     'navbar'      => [
-        'projet' => 'PROJET NOUVEAU CENTRE',
-        'devenir-membre' => 'Devenir membre',
-        'espace-membre' => 'ESPACE MEMBRE',
-        'motdepasse-oublie' => "Mot de passe oublié",
-        "profil"    => "PROFIL",
-        "deconnexion" => "Déconnexion",
-        'ma-carte' => "Ma Carte"
+        'projet' => 'Projet Nouveau Centre',
+        'devenir-membre' => 'Become a Member',
+        'espace-membre' => 'Member Zone',
+        'motdepasse-oublie' => "Forgotten password",
+        "profil"    => "PROFILE",
+        "deconnexion" => "Logout",
+        'ma-carte' => "My Card"
     ],
     
     'home'       => [
-        'sous-titre'    => 'En tant qu’occupants du secteur, vous êtes au cœur de notre initiative de revitalisation du centre-ville de Montréal, c’est pourquoi nous vous offrons la carte Projet Nouveau Centre Privilèges qui vous permettra de bénéficier en tout temps de plusieurs rabais et offres chez nos partenaires.',
-        'privileges'    => 'Vos Privil&egrave;ges'
+        'sous-titre'    => 'As members of our local community, you are at the heart of our revitalization initiative for downtown Montreal. That is why we are offering you the Projet Nouveau Centre Privilèges card, which will allow you to take advantage of a variety discounts and offers from our partners at all times.',
+        'privileges'    => 'Your privileges',
+        'offer-cta'     => 'LEARN MORE',
+
     ],
 
+    'offers' => [
+         'how-to' => 'How to get your card',
+         'date-fin' => 'Offer available until',
+         'addresse' => 'Address:',
+        'itineraire'    => 'View map'
+     ],
     'register'       => [
-        'titre'    => 'Devenir Membre',
-        'button'    => 'DEVENIR MEMBRE',
+        'titre'    => 'Become a Member',
+        'button'    => 'BECOME A MEMBER',
 
-        'firstname'   => 'Prénom',
-        'lastname'    => 'Nom',
-        'email'       => 'Courriel',
-        'phone'       => 'Cellulaire',
-        'company'   => 'Compagnie',
+        'firstname'   => 'First Name',
+        'lastname'    => 'Last Name',
+        'email'       => 'Email',
+        'phone'       => 'Phone Number',
+        'company'   => 'Company',
         'companylist'      => [
                     "1" => "Ivanhoé Cambridge",
                     "2" => "Lorem Ipsum",
                     "3" => "Lorem Ipsum",
         ],
-        'lang'      => 'Langue de préférence',
+        'lang'      => 'Preferred Language',
         'langFR'    => 'Français',
         'langEN'    => 'English',
-        'terms'    => "J'accepte les conditions d'utilisation",
-        'optin'    => "J'accepte de recevoir des communications de la part d'Invahoé Cambridge",
-        'success'   => "Votre inscription a bien été prise en compte. Merci de vérifier vos emails afin de confirmer votre inscription"
+        'terms'    => "I accept the terms of use",
+        'optin'    => "I wish to receive communications from Ivanhoé Cambridge",
+        'success'   => "Your registration information has been received. Please check your email to confirm your registration."
     ],
     'profile'       => [
-        'titre'    => 'Profil',
-        'button'    => 'ENREGISTRER',
-        'success'   => "Votre profil a bien été mis à jour"
+        'titre'    => 'Profile',
+        'button'    => 'SAVE',
+        'success'   => "Your profile has been successfully updated"
     ],
 
     'login1'       => [
-        'titre'    => 'Espace Membre',
-        'button'    => 'SUIVANT',
+        'titre'    => 'Member Zone',
+        'button'    => 'Next',
     ],
     'login2'       => [
-        'titre'    => 'Espace Membre',
-        'button'    => 'CONNEXION',
-        'password'  =>  "Mot de passe",
-        "emailerror"=>  'Vous n\'êtes pas encore membre du projet Nouveau Centre : <br><a class="toggle-modal" href="/register" data-modaltype="register" data-action="DEVENIR MEMBRE">Devenir membre</a>',
-        "confirmerror" => "Votre inscription n'est pas confimée. <br>Nous venons de vous renvoyer un email de demande de confirmation.",
-        "passerror"=>  "Ce mot de passe est incorrect.",
-        "success" => "Vous êtes connecté à votre espace membre."
+        'titre'    => 'Member Zone',
+        'button'    => 'LOGIN',
+        'password'  =>  "Password",
+        "emailerror"=>  'You are not yet a member of Projet Nouveau Centre : <br><a class="toggle-modal" href="/register" data-modaltype="register" data-action="DEVENIR MEMBRE">Register</a>',
+        "confirmerror" => "Your registration is not yet complete. <br>Please check your email for a confirmaton link.",
+        "passerror"=>  "Your password is incorrect.",
+        "success" => "Your are logged in to your member zone."
     ],
 
     'confirm'       => [
-        'titre'    => 'Espace Membre',
-        'soustitre' => "Votre inscription est confirmée. Veuillez choisir un mot de passe",
-        'button'    => 'CONFIRMER',
-        'password'  => "Mot de passe",
+        'titre'    => 'Member Zone',
+        'soustitre' => "Your registration is confirmed. Please choose a password",
+        'button'    => 'CONFIRM',
+        'password'  => "Password",
         'confirm-password'  => "Confirmation",
-        'success' => "Votre inscription est maintenant terminée."
+        'success' => "Your registration is complete."
     ],
 
     'passwordreset'       => [
-        'titre'    => 'Mot de passe oublié',
-        'button'    => 'SUIVANT',
-        "invaliduser"   => "Cette adresse email n'existe pas",
-        'success'   =>  "Un email de réinitialisation de mot de passe vous a été envoyé."
+        'titre'    => 'Forgotten password',
+        'button'    => 'NEXT',
+        "invaliduser"   => "This email address does not exist in our system",
+        'success'   =>  "A password recovery email has been sent to your address."
     ],
     'passwordchange'       => [
-        'titre'    => 'Réinitialiser votre mot de passe',
-        'button'    => 'SUIVANT',
-        'success'   => "Votre mot de passe a été mis à jour."
+        'titre'    => 'Change your password',
+        'button'    => 'NEXT',
+        'success'   => "Your password has been changed."
     ],
 
     'formerrors'       => [
-        'firstname'    => "Merci d'indiquer votre prénom",
-        'lastname'    => "Merci d'indiquer votre nom",
-        'email'        => "Merci d'indiquer une adresse email valide",
-        'phone'         => "Le numéro de mobile doit respecter ce format : +1(999)-999-9999",
-        'terms'         => "Vous devez accepter les CGU",
-        'password'      => "Merci d'indiquer votre mot de passe",
-        'password-length' => "Votre mot de passe doit être composé de 4 à 12 caractères",
-        'generalerror'  => "Une erreur est survenue."
+        'firstname'    => "Please enter your First Name",
+        'lastname'    => "Please enter your Last Name",
+        'email'        => "Please enter a valid email",
+        'phone'         => "Your mobile phone number must be in this format : +1(999)-999-9999",
+        'terms'         => "You must accept the terms of use",
+        'password'      => "Please enter your password",
+        'password-length' => "Your password must contain 4 to 12 characters",
+        'generalerror'  => "An error has occured."
     ],
 
     'mycard'       => [
-        'titre'    => 'Ma Carte'
+        'titre'    => 'My Card'
     ],
 
     'footer'      => [
