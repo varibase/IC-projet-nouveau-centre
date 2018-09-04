@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'switch-lang' => 'en',
+    'switch-lang' => 'fr',
 
     'navbar'      => [
         'projet' => 'Projet Nouveau Centre',
