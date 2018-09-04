@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Contracts\Auth\CanResetPassword;
 use App\Notifications\MailResetPasswordNotification;
+use App\Models\Card;
 
 class User extends Authenticatable
 {
@@ -84,7 +85,7 @@ class User extends Authenticatable
             }
             $card = Card::where('card_number', '=', $card_number)->first();
             $card->user_id = $this->user_id;
-            $card->save;
+            $card->save();
         }
 
         return $card;
