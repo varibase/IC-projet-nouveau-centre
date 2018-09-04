@@ -62,10 +62,18 @@ class AdminController extends Controller
             $user->company_id = $company->company_id;
         }
 
-        if($user->card->card_number != $request->card_number)
+        if($user->card()->count())
+        {
+            if($user->card->card_number != $request->card_number)
+            {
+                $user->newCard('physical', $request->card_number);
+            }
+        }
+        else
         {
             $user->newCard('physical', $request->card_number);
         }
+
 
         $user->save();
         $request->session()->flash('updated', $user->user_id);
