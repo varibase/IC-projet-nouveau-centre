@@ -2,6 +2,8 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Card;
+use App\Models\ImportContacts;
 use Illuminate\Foundation\Http\FormRequest;
 use App\Models\User;
 use App\Models\Company;
@@ -75,5 +77,7 @@ class RegistrationRequest extends FormRequest
 
         return $user;
     }
+
+
 
 }

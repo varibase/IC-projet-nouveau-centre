@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/import', 'RegistrationController@import');
+
 
 Route::get('/', 'IndexController@home')->name('home');
 
