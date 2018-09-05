@@ -1,11 +1,11 @@
 <div class="container-fluid">
     <div class="row">
         @foreach($offers as $offer)
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center cardcontainer{{$offer->offer_id}}" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="{{$loop->index*100}}" data-aos-easing="ease-out-cubic">
+        <div class="col-12 col-md-6 col-lg-3 text-center cardcontainer{{$offer->offer_id}}" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="{{$loop->index*100}}" data-aos-easing="ease-out-cubic">
             <img src="/img/offers/{{ $offer->partner->img }}" class="card-img-over" width="160" >
             <div class="card">
                 <div class="card-body">
-                    <div class="card-text">
+                    <div class="card-text" data-mh="offer-text">
                         @if($detail = $offer->info()->where('lang', \App::getLocale())->first())
                         <h5 class="card-title">{{ $detail->title }}</h5>
                         <p class="card-text" >
