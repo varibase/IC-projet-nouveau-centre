@@ -21,7 +21,7 @@ return [
     ],
 
     'offers' => [
-         'how-to' => 'Comment obtenir l’offre',
+         'how-to' => 'Comment obtenir l’offre ?',
          'date-fin' => 'Offre valable jusqu’au',
          'addresse' => 'Adresse:',
         'itineraire'    => 'voir l\'itinéraire'
@@ -45,7 +45,7 @@ return [
         'langEN'    => 'English',
         'terms'    => "J'accepte les conditions d'utilisation",
         'optin'    => "J'accepte de recevoir des communications de la part d'Invahoé Cambridge",
-        'success'   => "Votre inscription a bien été prise en compte. Merci de vérifier vos emails afin de confirmer votre inscription"
+        'success'   => "Votre inscription a bien été prise en compte. Merci de vérifier vos courriels afin de confirmer votre inscription"
     ],
     'profile'       => [
         'titre'    => 'Profil',
@@ -62,9 +62,9 @@ return [
         'button'    => 'CONNEXION',
         'password'  =>  "Mot de passe",
         "emailerror"=>  'Vous n\'êtes pas encore membre du projet Nouveau Centre : <br><a class="toggle-modal" href="/register" data-modaltype="register" data-action="DEVENIR MEMBRE">Devenir membre</a>',
-        "confirmerror" => "Votre inscription n'est pas confimée. <br>Nous venons de vous renvoyer un email de demande de confirmation.",
+        "confirmerror" => "Votre inscription n'est pas confimée. <br>Nous venons de vous renvoyer un courriel de demande de confirmation.",
         "passerror"=>  "Ce mot de passe est incorrect.",
-        "success" => "Vous êtes connecté à votre espace membre."
+        "success" => "Vous êtes connecté(e) à votre espace membre."
     ],
 
     'confirm'       => [

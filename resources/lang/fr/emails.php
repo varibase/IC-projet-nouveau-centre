@@ -8,7 +8,7 @@ return [
 
     'help'      => [
         'questionsl1' => "Des questions ?",
-        'questionsl2' => 'Visitez notre page <a href="#" style="color: #000000;text-decoration:underline;">FAQ</a> ou contactez-nous :',
+        'questionsl2' => 'N\'hésitez pas à nous contacter :',
     ],
 
     'email-confirm' => [

@@ -21,7 +21,7 @@ return [
     ],
 
     'offers' => [
-         'how-to' => 'How to get your card',
+         'how-to' => 'How to get your offer ?',
          'date-fin' => 'Offer available until',
          'addresse' => 'Address:',
         'itineraire'    => 'View map'
