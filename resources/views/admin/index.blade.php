@@ -14,7 +14,8 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Company</th>
-                        <th>Status</th>
+                        <th>Account Status</th>
+                        <th>Physical Card</th>
                         <th>#</th>
                     </tr>
                     </thead>
@@ -37,6 +38,13 @@
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->company->name }}</td>
                         <td>@if($user->confirmed) <span class="badge badge-success">CONFIRMED</span> @else <span class="badge badge-warning">PENDING CONFIRMATION</span> @endif</td>
+                        <td>
+                            @if($user->card()->where('type_id', 2)->count())
+                                <span class="badge badge-success">YES</span>
+                            @else
+                                <span class="badge badge-danger">NO</span>
+                            @endif
+                        </td>
                         <td>
                             <button
                                     type="button"

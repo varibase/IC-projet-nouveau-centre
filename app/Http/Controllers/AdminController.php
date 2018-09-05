@@ -21,7 +21,7 @@ class AdminController extends Controller
     {
         if(Auth::guard('admin')->check())
         {
-            $users = User::where('location_id', Auth::guard('admin')->user()->location_id)->get();
+            $users = User::where('location_id', Auth::guard('admin')->user()->location_id)->with(['company', 'card'])->get();
             return view('admin.index')->with('users',$users);
         }
         else
