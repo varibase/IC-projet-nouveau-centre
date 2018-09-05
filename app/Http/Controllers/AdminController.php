@@ -97,7 +97,7 @@ class AdminController extends Controller
         $user->save();
         $user->newCard('physical', $request->card_number);
 
-        $request->session()->flash('updated', $user->user_id);
+        $request->session()->flash('created', $user->user_id);
 
         return redirect('/admin/');
     }

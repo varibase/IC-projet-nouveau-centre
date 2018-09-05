@@ -88,6 +88,15 @@
                 </div>
                 <form method="post" action="/admin/update">
                 <div class="modal-body">
+                        @if(session()->has('updated'))
+                            <div class="alert alert-success" role="alert">
+                               User Successfully Updated
+                            </div>
+                        @elseif(session()->has('created'))
+                            <div class="alert alert-success" role="alert">
+                                User Successfully Created
+                            </div>
+                        @endif
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="first_name" class="col-form-label">First Name:</label>
@@ -168,10 +177,20 @@
             }
         });
 
+        $('#userModal').on('hidden.bs.modal', function (e) {
+            $(".alert").alert('close');
+        });
+
         @if(session()->has('updated'))
             $(document).ready(function() {
                 $('#user-{{ session('updated') }}').trigger('click');
             });
+        @endif
+
+        @if(session()->has('created'))
+        $(document).ready(function() {
+            $('#user-{{ session('created') }}').trigger('click');
+        });
         @endif
     </script>
 @endpush
