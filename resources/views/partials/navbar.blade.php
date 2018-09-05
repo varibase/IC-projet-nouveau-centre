@@ -11,7 +11,7 @@
                 <div class="navbar-collapse offcanvas-collapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="/">@lang('pages.navbar.projet')</a>
+                            <a class="nav-link" href="https://www.projetnouveaucentre.ca/{{ \App::getLocale() }}">@lang('pages.navbar.projet')</a>
                         </li>
                     @guest
                         <li class="nav-item">
