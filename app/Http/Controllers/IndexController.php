@@ -21,7 +21,7 @@ class IndexController extends Controller
         return view('maps');
     }
 
-    public function home()
+    public function home(Request $request)
     {
         if(\Auth::check())
         {
@@ -45,6 +45,20 @@ class IndexController extends Controller
                 Mapper::marker($offer->partner->address->latitude, $offer->partner->address->longitude, ['eventClick' => "ShowOffer($offer->offer_id)"]);
             }
 
+        }
+
+        if($request->isMethod('post'))
+        {
+            if($request->has(['password', 'email']))
+            {
+                $myRequest = Request::create('/login', 'post', $request->all());
+                return Route::dispatch($myRequest)->getContent();
+            }
+            elseif($request->has('email'))
+            {
+                $myRequest = Request::create('/loginstep2', 'post', $request->all());
+                return Route::dispatch($myRequest)->getContent();
+            }
         }
         return view('home');
     }

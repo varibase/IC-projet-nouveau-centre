@@ -14,7 +14,7 @@
 Route::get('/import', 'RegistrationController@import');
 
 
-Route::get('/', 'IndexController@home')->name('home');
+Route::any('/', 'IndexController@home')->name('home');
 
 Route::get('/lang/{lang?}',[
     'uses'=>'LangSwitcherController@LangSwitcher',
