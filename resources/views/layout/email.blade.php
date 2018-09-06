@@ -277,8 +277,8 @@
                                     </p>
                                 </td>
                                 <td class="stack-column-center message_footer" width="450" style="padding: 18px 0px 0px 0px; font-family: Arial, sans-serif; font-size: 10px; line-height: 14px; color: #ffffff;font-weight:normal;">
-                                    <p style="margin: 0 20px 0px 35px;text-align:right;"><multiline>@lang('emails.footer.p1')</multiline></p>
-                                    <p style="margin: 10px 20px 0px 35px;text-align:right;">@lang('emails.footer.l2')<br>
+                                    <p style="margin: 10px 20px 0px 35px;text-align:right;">@lang('emails.footer.l1')<br>
+                                    @lang('emails.footer.l2')<br>
                                     @lang('emails.footer.l3')<br>
                                     @lang('emails.footer.l4')</p></td>
                             </tr></tbody></table>
