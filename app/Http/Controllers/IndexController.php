@@ -53,15 +53,57 @@ class IndexController extends Controller
         {
             if($request->has(['password', 'email']))
             {
-                //$myRequest = Request::create('/login', 'post', $request->all());
-                Log::info("Redirect 1");
-                return redirect()->action('UsersController@login', $request);
+                if(Auth::attempt(['email' => $request->email, 'password' => $request->password]))
+                {
+                    return response()->json([
+                        'success'  => true,
+                        'msg'      =>  __('pages.login2.success'),
+                        'refresh'  => true
+                    ]);
+                }
+                else
+                {
+                    return response()->json([
+                        'success'  => false,
+                        'msg'      =>  __('pages.login2.passerror')
+                    ]);
+                }
             }
             elseif($request->has('email'))
             {
-                //$myRequest = Request::create('/loginstep2', 'post', $request->all());
-                Log::info("Redirect 2");
-                return redirect()->action('UsersController@loginstep2', $request);
+                $user = User::where('email', $request->email)->first();
+
+                if(!$user)
+                {
+                    return response()->json([
+                        'success'  => false,
+                        'msg'      =>  __('pages.login2.emailerror')
+                    ]);
+
+                } else {
+
+                    if ($user->confirmed) {
+
+                        return response()->json([
+                            'success'  => true,
+                            'view'     =>  view('member.login2', ['email' => $request->email])->render(),
+                            "action"   => __('pages.login2.button')
+                        ]);
+
+                    } else {
+
+                        Mail::send('email.confirm', ['confirmation_code' => $user->confirmation_code, 'prenom' => $user->first_name],
+                            function($message) use ($user) {
+                                $message->to($user->email, $user->first_name." ".$user->last_name)
+                                    ->subject(__('emails.email-confirm.subject'));
+                            });
+
+                        return response()->json([
+                            'success'  => false,
+                            'msg'      =>  __('pages.login2.confirmerror')
+                        ]);
+                    }
+                }
             }
         }
         return view('home');
