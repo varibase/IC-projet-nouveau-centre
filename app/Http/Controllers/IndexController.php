@@ -53,11 +53,13 @@ class IndexController extends Controller
             if($request->has(['password', 'email']))
             {
                 //$myRequest = Request::create('/login', 'post', $request->all());
+                Log::info("Redirect 1");
                 return redirect()->action('UsersController@login', $request);
             }
             elseif($request->has('email'))
             {
                 //$myRequest = Request::create('/loginstep2', 'post', $request->all());
+                Log::info("Redirect 2");
                 return redirect()->action('UsersController@loginstep2', $request);
             }
         }
