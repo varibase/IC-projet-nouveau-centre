@@ -12,7 +12,7 @@ return [
     ],
 
     'email-confirm' => [
-        "subject"   => "Merci de confirmer votre adresse courriel.",
+        "subject"   => "Merci de confirmer votre adresse courriel",
         'p'         => "Veuillez cliquer sur le lien ci-dessous pour confirmer votre inscription au programme Privilèges de Projet Nouveau Centre.",
         "button"    => "CONFIRMER",
         "help"      => "Vous éprouvez des difficultés pour confirmer votre compte? Venez nous voir au poste d’accueil du hall principal, au 1 Place Ville Marie, il nous fera plaisir de vous aider pour finaliser votre inscription."

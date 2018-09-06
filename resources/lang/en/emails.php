@@ -12,7 +12,7 @@ return [
     ],
 
     'email-confirm' => [
-        "subject"   => "Please confirm your e-mail address.",
+        "subject"   => "Please confirm your e-mail address",
         'p'         => "Please click on the link below to confirm your registration for the Projet Nouveau Centre Privilèges program.",
         "button"    => "I CONFIRM",
         "help"      => "Having trouble confirming your account? Visit us at the main lobby reception desk at 1 Place Ville Marie; we will be happy to help you finalize your registration."
