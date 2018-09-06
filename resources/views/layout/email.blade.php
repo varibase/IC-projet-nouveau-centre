@@ -243,7 +243,7 @@
                                         </table>
                                     </center>
                                 </td>
-                            </tr>
+                            </tr>{{--
                             <tr>
                                 <td class="message" style="text-align: center;padding: 5px 70px 30px 70px;">
                                     <center>
@@ -258,7 +258,7 @@
                                         </table>
                                     </center>
                                 </td>
-                            </tr>
+                            </tr>--}}
                         </tbody></table>
                     </td>
                 </tr>
