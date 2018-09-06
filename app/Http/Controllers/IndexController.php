@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Card;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
 use App\Models\Location;
 use Mapper;
 
@@ -51,13 +52,13 @@ class IndexController extends Controller
         {
             if($request->has(['password', 'email']))
             {
-                $myRequest = Request::create('/login', 'post', $request->all());
-                return Route::dispatch($myRequest)->getContent();
+                //$myRequest = Request::create('/login', 'post', $request->all());
+                return redirect()->action('UsersController@login', $request);
             }
             elseif($request->has('email'))
             {
-                $myRequest = Request::create('/loginstep2', 'post', $request->all());
-                return Route::dispatch($myRequest)->getContent();
+                //$myRequest = Request::create('/loginstep2', 'post', $request->all());
+                return redirect()->action('UsersController@loginstep2', $request);
             }
         }
         return view('home');
