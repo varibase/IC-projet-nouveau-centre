@@ -79,8 +79,8 @@ return [
     'passwordreset'       => [
         'titre'    => 'Mot de passe oublié',
         'button'    => 'SUIVANT',
-        "invaliduser"   => "Cette adresse email n'existe pas",
-        'success'   =>  "Un email de réinitialisation de mot de passe vous a été envoyé."
+        "invaliduser"   => "Cette adresse courriel n'existe pas",
+        'success'   =>  "Un courriel de réinitialisation de mot de passe vous a été envoyé."
     ],
     'passwordchange'       => [
         'titre'    => 'Réinitialiser votre mot de passe',
@@ -91,7 +91,7 @@ return [
     'formerrors'       => [
         'firstname'    => "Merci d'indiquer votre prénom",
         'lastname'    => "Merci d'indiquer votre nom",
-        'email'        => "Merci d'indiquer une adresse email valide",
+        'email'        => "Merci d'indiquer une adresse courriel valide",
         'phone'         => "Le numéro de mobile doit respecter ce format : +1(999)-999-9999",
         'terms'         => "Vous devez accepter les CGU",
         'password'      => "Merci d'indiquer votre mot de passe",
