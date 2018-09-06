@@ -2,7 +2,7 @@
 
 return [
     'titre' => 'Projet Nouveau Centre',
-    'entete' => "Plus qu'une étape pour confirmer votre inscription.",
+    'entete' => "Only one step left to confirm your registration.",
 
     'bonjour' => "Hello",
 
@@ -31,7 +31,7 @@ return [
     ],
 
     'footer' => [
-        'p1'    => "Si vous avez reçu ce message par erreur, effacez-le tout simplement. Vous n'êtes pas inscrit si vous ne cliquez pas sur le lien de confirmation ci-dessus.",
+        'p1'    => "If you receive this email by mistake, just delete it. You won’t be subscribed if you don’t click on the above confirmation link.",
         'l1'    => "© 2018 Ivanhoé Cambridge",
         "l2"    => "Ivanhoé Cambridge Inc. | 1001, rue du Square-Victoria, bureau C-500",
         "l3"    => "Montréal, Québec, Canada  H2Z 2B5",
