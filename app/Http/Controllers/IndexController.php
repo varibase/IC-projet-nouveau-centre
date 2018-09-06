@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use App\Models\Location;
 use Mapper;
+use Illuminate\Support\Facades\Log;
 
 class IndexController extends Controller
 {
