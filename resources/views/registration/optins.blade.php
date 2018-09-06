@@ -4,7 +4,7 @@
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="1" name="terms" id="terms" required>
                                 <label class="form-check-label" for="terms">
-                                    @lang('pages.register.terms')
+                                    @lang('pages.register.terms1') <a style="color: #000;" target="_blank" href="{{ asset("files/legal-".\App::getLocale().".pdf") }}">@lang('pages.register.terms2')</a>
                                 </label>
                                 <div class="invalid-feedback">
                                     @lang('pages.formerrors.terms')

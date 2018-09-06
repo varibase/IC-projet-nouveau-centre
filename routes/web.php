@@ -11,10 +11,9 @@
 |
 */
 
-Route::get('/import', 'RegistrationController@import');
+//Route::get('/import', 'RegistrationController@import');
 
-
-Route::any('/', 'IndexController@home')->name('home');
+Route::get('/', 'IndexController@home')->name('home');
 
 Route::get('/lang/{lang?}',[
     'uses'=>'LangSwitcherController@LangSwitcher',
@@ -36,6 +35,7 @@ Route::post('/user/password', 'UsersController@password');
 Route::get('/logout', 'UsersController@logout');
 
 Route::get('/maps', 'IndexController@maps');
+Route::get('/legal', 'IndexController@legal');
 
 Route::get('/password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');

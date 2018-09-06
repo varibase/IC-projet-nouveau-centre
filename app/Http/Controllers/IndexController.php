@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Card;
 use Illuminate\Http\Request;
 use App\Models\Location;
+use Illuminate\Support\Facades\App;
 use Mapper;
 
 class IndexController extends Controller
@@ -47,6 +48,12 @@ class IndexController extends Controller
 
         }
         return view('home');
+    }
+
+    public function legal()
+    {
+        $filename = url('/').'/files/legal-'.App::getLocale().'.pdf';
+        return redirect($filename);
     }
 
     public function cards()

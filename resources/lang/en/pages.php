@@ -43,7 +43,8 @@ return [
         'lang'      => 'Preferred Language',
         'langFR'    => 'Français',
         'langEN'    => 'English',
-        'terms'    => "I accept the terms of use",
+        'terms1'    => "I accept the",
+        'terms2'    => "General Terms of Use",
         'optin'    => "I wish to receive communications from Ivanhoé Cambridge",
         'success'   => "Your registration information has been received. Please check your email to confirm your registration."
     ],
@@ -93,7 +94,7 @@ return [
         'lastname'    => "Please enter your Last Name",
         'email'        => "Please enter a valid email",
         'phone'         => "Your mobile phone number must be in this format : +1(999)-999-9999",
-        'terms'         => "You must accept the terms of use",
+        'terms'         => "You must accept the General Terms of Use",
         'password'      => "Please enter your password",
         'password-length' => "Your password must contain 4 to 12 characters",
         'generalerror'  => "An error has occured."
@@ -107,6 +108,8 @@ return [
         'l1' => '&copy; 2018 Ivanhoé Cambridge',
         'l2' => 'Ivanhoé Cambridge Inc.',
         'l3' => '1001, rue du Square-Victoria',
-        'l4' => 'Montréal, Québec, Canada  H2Z 2B5'
+        'l4' => 'Montréal, Québec, Canada  H2Z 2B5',
+        'cgu' => 'General Terms of Use'
     ],
+    'cgu-file' => 'files/legal-en.pdf',
 ];

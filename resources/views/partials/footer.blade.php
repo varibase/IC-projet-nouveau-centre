@@ -11,5 +11,10 @@
                 @lang('pages.footer.l4')
             </p>
         </div>
+        <div class="col-12">
+            <p class="text-center">
+                <a href="/legal" target="_blank" style="text-decoration: none; color:white;">@lang('pages.footer.cgu')</a>
+            </p>
+        </div>
     </div>
 </div>

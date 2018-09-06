@@ -43,7 +43,8 @@ return [
         'lang'      => 'Langue de préférence',
         'langFR'    => 'Français',
         'langEN'    => 'English',
-        'terms'    => "J'accepte les conditions d'utilisation",
+        'terms1'    => "J'accepte les",
+        'terms2'    => "Conditions Générales d'utilisation",
         'optin'    => "J'accepte de recevoir des communications de la part d'Invahoé Cambridge",
         'success'   => "Votre inscription a bien été prise en compte. Merci de vérifier vos courriels afin de confirmer votre inscription"
     ],
@@ -107,6 +108,9 @@ return [
         'l1' => '&copy; 2018 Ivanhoé Cambridge',
         'l2' => 'Ivanhoé Cambridge Inc.',
         'l3' => '1001, rue du Square-Victoria',
-        'l4' => 'Montréal, Québec, Canada  H2Z 2B5'
+        'l4' => 'Montréal, Québec, Canada  H2Z 2B5',
+        'cgu' => "Conditions Générales d'Utilisation"
     ],
+
+    'cgu-file' => 'files/legal-fr.pdf',
 ];
