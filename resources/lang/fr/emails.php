@@ -31,7 +31,7 @@ return [
     ],
 
     'footer' => [
-        'p1'    => "Si vous avez reçu ce message par erreur, effacez-le tout simplement. Vous n'êtes pas inscrit si vous ne cliquez pas sur le lien de confirmation ci-dessus.",
+        'p1'    => "Si vous avez reçu ce message par erreur, effacez-le tout simplement. Vous n'êtes pas inscrit(e) si vous ne cliquez pas sur le lien de confirmation ci-dessus.",
         'l1'    => "© 2018 Ivanhoé Cambridge",
         "l2"    => "Ivanhoé Cambridge Inc. | 1001, rue du Square-Victoria, bureau C-500",
         "l3"    => "Montréal, Québec, Canada  H2Z 2B5",
