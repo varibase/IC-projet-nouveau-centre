@@ -4,12 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Card;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Route;
 use App\Models\Location;
 use Mapper;
-use Illuminate\Support\Facades\Log;
-use App\Models\User;
-use Illuminate\Support\Facades\Mail;
 
 class IndexController extends Controller
 {
@@ -49,66 +45,6 @@ class IndexController extends Controller
                 Mapper::marker($offer->partner->address->latitude, $offer->partner->address->longitude, ['eventClick' => "ShowOffer($offer->offer_id)"]);
             }
 
-        }
-
-        if($request->isMethod('post'))
-        {
-            if($request->has(['password', 'email']))
-            {
-                Log::info('Redirect1');
-                if(\Auth::attempt(['email' => $request->email, 'password' => $request->password]))
-                {
-                    return response()->json([
-                        'success'  => true,
-                        'msg'      =>  __('pages.login2.success'),
-                        'refresh'  => true
-                    ]);
-                }
-                else
-                {
-                    return response()->json([
-                        'success'  => false,
-                        'msg'      =>  __('pages.login2.passerror')
-                    ]);
-                }
-            }
-            elseif($request->has('email'))
-            {
-                Log::info('Redirect2');
-                $user = User::where('email', $request->email)->first();
-
-                if(!$user)
-                {
-                    return response()->json([
-                        'success'  => false,
-                        'msg'      =>  __('pages.login2.emailerror')
-                    ]);
-
-                } else {
-
-                    if ($user->confirmed) {
-
-                        return response()->json([
-                            'success'  => true,
-                            'view'     =>  view('member.login2', ['email' => $request->email])->render(),
-                            "action"   => __('pages.login2.button')
-                        ]);
-
-                    } else {
-
-                        Mail::send('email.confirm', ['confirmation_code' => $user->confirmation_code, 'prenom' => $user->first_name],
-                            function($message) use ($user) {
-                                $message->to($user->email, $user->first_name." ".$user->last_name)
-                                    ->subject(__('emails.email-confirm.subject'));
-                            });
-
-                        return response()->json([
-                            'success'  => false,
-                            'msg'      =>  __('pages.login2.confirmerror')
-                        ]);
-                    }
-                }
-            }
         }
         return view('home');
     }
