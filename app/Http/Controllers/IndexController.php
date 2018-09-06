@@ -8,6 +8,8 @@ use Illuminate\Routing\Route;
 use App\Models\Location;
 use Mapper;
 use Illuminate\Support\Facades\Log;
+use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 
 class IndexController extends Controller
 {
@@ -53,7 +55,8 @@ class IndexController extends Controller
         {
             if($request->has(['password', 'email']))
             {
-                if(Auth::attempt(['email' => $request->email, 'password' => $request->password]))
+                Log::info('Redirect1');
+                if(\Auth::attempt(['email' => $request->email, 'password' => $request->password]))
                 {
                     return response()->json([
                         'success'  => true,
@@ -71,6 +74,7 @@ class IndexController extends Controller
             }
             elseif($request->has('email'))
             {
+                Log::info('Redirect2');
                 $user = User::where('email', $request->email)->first();
 
                 if(!$user)
