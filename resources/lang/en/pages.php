@@ -14,7 +14,7 @@ return [
     ],
     
     'home'       => [
-        'sous-titre'    => 'As members of our local community, you are at the heart of our revitalization initiative for downtown Montreal. That is why we are offering you the Projet Nouveau Centre Privilèges card, which will allow you to take advantage of a variety discounts and offers from our partners at all times.',
+        'sous-titre'    => 'As members of our local community, you are at the heart of our revitalization initiative for downtown Montreal. That is why we are offering you the Projet Nouveau Centre Privilèges card, which will allow you to take advantage of a variety of discounts and offers from our partners at all times.',
         'privileges'    => 'Your privileges',
         'offer-cta'     => 'LEARN MORE',
 

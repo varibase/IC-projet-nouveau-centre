@@ -21,7 +21,7 @@ return [
     'email-welcome' => [
         "subject"   => "Votre inscription au programme Privilèges de Projet Nouveau Centre est confirmée",
         'p1'         => "Vous êtes maintenant membre du programme Privilèges de Projet Nouveau Centre, notre initiative de revitalisation du centre-ville de Montréal.",
-        'p2'         => "Vous pouvez dès à présent profiter des offres privilèges que nous vous avons réservé à Place Ville Marie, au Centre Eaton de Montréal, au Fairmont Le Reine Elizabeth et à Maison Manuvie. Pour en profiter, il vous suffit de présenter votre carte de membre, que vous trouverez dans votre profil chez nos partenaires.",
+        'p2'         => "Vous pouvez dès à présent profiter des offres privilèges que nous vous avons réservé à Place Ville Marie, au Centre Eaton de Montréal, au Fairmont Le Reine Elizabeth et à Maison Manuvie. Pour en profiter, il vous suffit de présenter votre carte de membre physique ou votre carte digitale accessible sur votre profil chez nos partenaires.",
         "button"    => "DÉCOUVRIR MES PRIVILÈGES",
     ],
     'email-password-reset' => [

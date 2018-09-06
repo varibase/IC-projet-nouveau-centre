@@ -7,7 +7,7 @@
 
         <div class="col col-md-7 order-2 col-sm-12 order-md-1">
             <h5 class="card-title">{{ $detail->title }}</h5>
-            <p>{{ $detail->description }}</p>
+            <p>{!! $detail->description !!}</p>
         </div>
     </div>
     <div class="row">
