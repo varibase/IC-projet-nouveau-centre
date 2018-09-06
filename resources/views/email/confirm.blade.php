@@ -40,6 +40,10 @@
                     </td>
                 </tr>
                 <tr>
+                    <td class="message" style="padding: 5px 100px 15px 100px; font-family: Arial, sans-serif; font-size: 15px; line-height: 22px; color: #000000; text-align: center;font-weight: normal;">
+                        <p style="margin: 0;"><multiline>@lang('emails.footer.p1')</multiline></p>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </td>
