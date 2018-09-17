@@ -58,6 +58,9 @@
                                 @if ($params->registration)
                                     <option selected disabled></option>
                                 @endif
+                                @empty($user->company->name)
+                                    <option selected disabled></option>
+                                @endempty
                                 @foreach($companies as $company)
                                     <option
                                             @isset($user->company->name)

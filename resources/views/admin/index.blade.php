@@ -36,7 +36,7 @@
                     <tr>
                         <td>{{ $user->first_name }} {{ $user->last_name }}</td>
                         <td>{{ $user->email }}</td>
-                        <td>{{ $user->company->name }}</td>
+                        <td>@isset($user->company->name) {{ $user->company->name }} @endisset</td>
                         <td>@if($user->confirmed) <span class="badge badge-success">CONFIRMED</span> @else <span class="badge badge-warning">PENDING CONFIRMATION</span> @endif</td>
                         <td>
                             @if($user->card()->where('type_id', 2)->count())
@@ -53,7 +53,7 @@
                                     data-target="#userModal"
                                     data-fname="{{ $user->first_name }}"
                                     data-lname="{{ $user->last_name }}"
-                                    data-company="{{ $user->company->name }}"
+                                    data-company="@isset($user->company->name) {{ $user->company->name }} @endisset"
                                     data-lang="{{$user->lang}}"
                                     data-userid="{{ $user->user_id }}"
                                     @if($user->card()->count())

@@ -56,11 +56,20 @@ class AdminController extends Controller
         $user->last_name = $request->last_name;
         $user->email = $request->email;
         $user->lang = $request->lang;
-        if($user->company->name != $request->company)
+        if($user->company()->count())
+        {
+            if($user->company->name != $request->company)
+            {
+                $company = Company::firstOrCreate(['name' => $request->company, 'location_id' => 1]);
+                $user->company_id = $company->company_id;
+            }
+        }
+        else
         {
             $company = Company::firstOrCreate(['name' => $request->company, 'location_id' => 1]);
             $user->company_id = $company->company_id;
         }
+
 
         if($user->card()->count())
         {
