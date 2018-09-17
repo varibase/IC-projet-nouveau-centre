@@ -8,7 +8,8 @@
                 @lang('pages.footer.l1')<br>
                 @lang('pages.footer.l2')<br>
                 @lang('pages.footer.l3')<br>
-                @lang('pages.footer.l4')
+                @lang('pages.footer.l4')<br>
+                <a href="mailto:info@projetnouveaucentre.ca" target="_blank" style="text-decoration: underline; color:white;">info@projetnouveaucentre.ca</a>
             </p>
         </div>
         <div class="col-12">
