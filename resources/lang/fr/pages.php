@@ -45,7 +45,7 @@ return [
         'langEN'    => 'English',
         'terms1'    => "J'accepte les",
         'terms2'    => "Conditions Générales d'utilisation",
-        'optin'    => "J'accepte de recevoir des communications de la part d'Invahoé Cambridge",
+        'optin'    => "J'accepte de recevoir des communications de la part d'Ivanhoé Cambridge",
         'success'   => "Votre inscription a bien été prise en compte. Merci de vérifier vos courriels afin de confirmer votre inscription"
     ],
     'profile'       => [
