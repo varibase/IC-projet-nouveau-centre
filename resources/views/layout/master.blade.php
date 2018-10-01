@@ -30,5 +30,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 <script type="text/javascript" src="/js/vanillaTextMask.js"></script>
 <script type="text/javascript" src="/js/jquery.matchHeight-min.js"></script>
+<script>
+    $(document).keypress(function(e) {
+        if(e.which == 13) {
+            e.preventDefault();
+            if($('#call2action').length){
+                $('#call2action').click();
+            }
+        }
+    });
+</script>
 </body>
 </html>
