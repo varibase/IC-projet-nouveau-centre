@@ -24,10 +24,10 @@ mix.js('resources/assets/js/app.js', 'public/js')
             handleFetch: true,
             dynamicUrlToDependencies: { //you should add the path to your blade files here so they can be cached
                 //and have full support for offline first (example below)
-                '/': ['resources/views/home.blade.php'],
-                '/offer': ['resources/views/offer.blade.php'],
-                '/register': ['resources/views/registration/create.blade.php'],
-                '/mycard': ['resources/views/mycard.blade.php']
+             //   '/': ['resources/views/home.blade.php'],
+             //   '/offer/1': ['resources/views/offer.blade.php'],
+             //   '/register': ['resources/views/registration/create.blade.php'],
+             //   '/mycard': ['resources/views/mycard.blade.php']
                 // '/posts': ['resources/views/posts.blade.php']
             },
             staticFileGlobsIgnorePatterns: [/\.map$/, /mix-manifest\.json$/, /manifest\.json$/, /service-worker\.js$/],
