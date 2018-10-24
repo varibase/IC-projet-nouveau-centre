@@ -11031,9 +11031,9 @@ body {
 
   .modal-footer {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    right: 15px;
+    bottom: 44px;
+    left: 15px;
     height: 60px;
   }
 
@@ -11082,6 +11082,12 @@ body {
   height: 100%;
   display: block;
   height: 95% !important;
+}
+
+.freezePage {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
 }
 
 body {

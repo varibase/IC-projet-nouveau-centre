@@ -39,6 +39,14 @@
             }
         }
     });
+    $('#actionModal').on('shown.bs.modal', function (e) {
+        $('html').addClass('freezePage');
+        $('body').addClass('freezePage');
+    });
+    $('#actionModal').on('hidden.bs.modal', function (e) {
+        $('html').removeClass('freezePage');
+        $('body').removeClass('freezePage');
+    });
 </script>
 </body>
 </html>
