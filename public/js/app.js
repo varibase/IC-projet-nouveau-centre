@@ -13698,6 +13698,8 @@ $(function () {
 
     $('[data-toggle="offcanvas"]').on('click', function () {
         $('.offcanvas-collapse').toggleClass('open');
+        $('html').toggleClass('freezePage');
+        $('body').toggleClass('freezePage');
     });
 });
 
@@ -13706,6 +13708,8 @@ $(function () {
 
     $('.offcanvas-outside').on('click', function () {
         $('.offcanvas-collapse').removeClass('open');
+        $('html').removeClass('freezePage');
+        $('body').removeClass('freezePage');
     });
 });
 
