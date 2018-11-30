@@ -21,7 +21,7 @@ return [
     'email-welcome' => [
         "subject"   => "Congratulations!",
         'p1'         => "You are now a member of the Projet Nouveau Centre Privilèges program, our revitalization initiative for downtown Montreal.",
-        'p2'         => "You can now take advantage of the exclusive offers awaiting you at Place Ville Marie, Montreal Eaton Centre, Fairmont The Queen Elizabeth, and Maison Manuvie. Simply present your physical membership card or your digital card on your profile when visiting our partners.",
+        'p2'         => "You can now take advantage of the exclusive offers awaiting you at Place Ville Marie, Montreal Eaton Centre, Fairmont The Queen Elizabeth, and Maison Manuvie. When visiting our partners, simply present your physical membership card (available at Place Ville Marie guest services) or your digital card available on your profile from the mobile version of the site.",
         "button"    => "DISCOVER MY PRIVILEGES",
     ],
     'email-password-reset' => [
