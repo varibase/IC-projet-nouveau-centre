@@ -12,7 +12,7 @@
                     <div class="col-12">
                         <div class="form-group">
                             <label for="email">@lang('pages.register.email')</label>
-                            <input type="text" class="form-control" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            <input type="text" class="form-control" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" autocapitalize="none">
                             <div class="invalid-feedback">
                                 @lang('pages.formerrors.email')
                             </div>

@@ -33,7 +33,7 @@
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
                             <label for="email">@lang('pages.register.email')<sup>*</sup></label>
-                            <input type="text" class="form-control" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="{{ (!empty($user->email) ? $user->email : '') }}">
+                            <input type="text" class="form-control" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="{{ (!empty($user->email) ? $user->email : '') }}" autocapitalize="none">
                             <div class="invalid-feedback">
                                 @lang('pages.formerrors.email')
                             </div>

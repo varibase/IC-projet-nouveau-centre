@@ -13,7 +13,7 @@
                     <div class="col-12">
                         <div class="form-group">
                             <label for="password">@lang('pages.login2.password')</label>
-                            <input type="password" class="form-control" name="password" id="password" required>
+                            <input type="password" class="form-control" name="password" id="password" required autocapitalize="none">
                             <div class="invalid-feedback">
                                 @lang('pages.formerrors.password')
                             </div>
