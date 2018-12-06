@@ -10,7 +10,8 @@ return [
         'motdepasse-oublie' => "Mot de passe oublié",
         "profil"    => "PROFIL",
         "deconnexion" => "Déconnexion",
-        'ma-carte' => "Ma Carte"
+        'ma-carte' => "Ma Carte",
+        "aide" => "Aide"
     ],
     
     'home'       => [
@@ -102,6 +103,21 @@ return [
 
     'mycard'       => [
         'titre'    => 'Ma Carte'
+    ],
+
+    'help'       => [
+        'titre'    => 'Aide',
+        'p'         => "Ajoutez le raccourci à l'écran d'accueil de votre téléphone qui deviendra votre Web App Projet Nouveau Centre Privilèges.",
+        'l1-android'    => "1. Cliquez en haut à droite",
+        'l2-android'    => "2. Ajoutez à l’écran d’accueil",
+        'l3-android'    => "3. L'icône est sur votre écran d’accueil",
+
+        'l1-apple'    => "1. Cliquez en bas au centre",
+        'l2-apple'    => "2. Ajoutez à l’écran d’accueil",
+        'l3-apple'    => "3. L'icône est sur votre écran d’accueil",
+
+        'mycard-titre'  =>  "Ma carte",
+        'mycard-p'  =>  "Votre carte digitale est disponible sur la version mobile du site web Projet Nouveau Centre Privilèges. Vous pouvez également vous procurer votre carte physique au kiosque d'informations de Place Ville Marie."
     ],
 
     'footer'      => [

@@ -114,11 +114,21 @@ var ModalOptions = {
         dialog : "modal-lg",
         footer : 0
     },
+    'mycardhelp': {
+        class  : "cardModal",
+        dialog : "modal-mid",
+        footer : 0
+    },
     'offer':{
         class  : "offerModal",
         dialog : "modal-lg",
         footer : 0
-    }
+    },
+    'help': {
+        class  : "helpModal",
+        dialog : "modal-lg",
+        footer : 0
+    },
 };
 
 $(document).on("click",".toggle-modal", function(event){
@@ -218,4 +228,10 @@ $('#call2action').on('click',function(event){
     });
 });
 
+$(document).on("click",".toggle-help-device", function(event){
+    event.preventDefault();
+    event.stopPropagation();
 
+    $("#help-content").fadeOut('fast').load($(this).data('content')).fadeIn('fast');
+    
+  });

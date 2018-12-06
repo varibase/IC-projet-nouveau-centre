@@ -10,7 +10,8 @@ return [
         'motdepasse-oublie' => "Forgotten password",
         "profil"    => "PROFILE",
         "deconnexion" => "Logout",
-        'ma-carte' => "My Card"
+        'ma-carte' => "My Card",
+        "aide" => "Help"
     ],
     
     'home'       => [
@@ -102,6 +103,22 @@ return [
 
     'mycard'       => [
         'titre'    => 'My Card'
+    ],
+
+    'help'       => [
+        'titre'    => 'Help',
+        'p'         => "Add a shortcut to your home screen so you can quickly open your Web App Projet Nouveau Centre Privilèges.",
+        'l1-android'    => "1. Click in the top right corner",
+        'l2-android'    => "2. Add to home screen",
+        'l3-android'    => "3. Icon is on your home screen",
+
+        'l1-apple'    => "1. Click in the bottom center",
+        'l2-apple'    => "2. Add to home screen",
+        'l3-apple'    => "3. Icon is on your home screen",
+
+        'mycard-titre'  =>  "My card",
+        'mycard-p'  =>  "Your digital card is displayed on the mobile version of Projet Nouveau Centre Privilèges web site. <br>
+        You can also get a physical card at Place Ville Marie information desk."
     ],
 
     'footer'      => [

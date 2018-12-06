@@ -28,6 +28,12 @@
                         <li class="nav-item d-lg-none d-md-none">
                             <a class="nav-link toggle-modal" href="/mycard" data-modaltype="mycard">@lang('pages.navbar.ma-carte')</a>
                         </li>
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link toggle-modal" href="/mycardhelp" data-modaltype="mycardhelp">@lang('pages.navbar.ma-carte')</a>
+                        </li>
+                        <li class="nav-item d-lg-none d-md-none">
+                            <a class="nav-link toggle-modal" href="/help" data-modaltype="help">@lang('pages.navbar.aide')</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/logout">@lang('pages.navbar.deconnexion')</a>
                         </li>

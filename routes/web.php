@@ -47,3 +47,7 @@ Route::post('/password/reset', 'Auth\ResetPasswordController@reset');
 Route::get('/mycard', 'MyCardController@show');
 Route::get('/profile', 'ProfileController@show');
 Route::post('/update', 'ProfileController@update')->name('profile.update');
+
+Route::get('/help', 'HelpController@show');
+Route::get('/help/{device}', 'HelpController@device');
+Route::get('/mycardhelp', 'HelpController@cardhelp');
