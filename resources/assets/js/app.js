@@ -140,6 +140,8 @@ $(document).on("click",".toggle-modal", function(event){
 
 function ShowModal2(modal, href, action) {
 
+    $('html').removeClass().addClass(modal);
+
     $('.modal-body').html("");
 
     $('#actionModal').addClass(ModalOptions[modal].class);

@@ -4,7 +4,7 @@
             <h1>@lang('pages.mycard.titre')</h1>
             <div id="macarte">
 
-                <svg class="img-fluid" width="686" height="1082" viewBox="0 0 181.50416 286.27917" version="1.1" id="svg16">
+                <svg class="img-fluid"  viewBox="0 0 181.50416 286.27917" version="1.1" id="svg16">
                     <defs id="defs10" />
                         <g id="layer1" transform="translate(0,-10.720817)">
                         <g id="layer2">
