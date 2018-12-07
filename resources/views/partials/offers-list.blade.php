@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
         @foreach($offers as $offer)
-        <div class="col-12 col-md-6 col-lg-3 text-center cardcontainer{{$offer->offer_id}}" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="{{$loop->index*100}}" data-aos-easing="ease-out-cubic">
+        <div class="col-12 col-md-6 col-lg-3 text-center cardcontainer{{$offer->offer_id}}" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="{{$loop->index*100}}" data-aos-easing="ease-out-cubic" data-aos-once="true">
             <img src="/img/offers/{{ $offer->partner->img }}" class="card-img-over" width="160" >
             <div class="card">
                 <div class="card-body">
