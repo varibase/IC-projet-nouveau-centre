@@ -107,18 +107,17 @@ return [
 
     'help'       => [
         'titre'    => 'Help',
-        'p'         => "Add a shortcut to your home screen so you can quickly open your Web App Projet Nouveau Centre Privilèges.",
-        'l1-android'    => "1. Click in the top right corner",
-        'l2-android'    => "2. Add to home screen",
-        'l3-android'    => "3. Icon is on your home screen",
+        'p'         => "Add a shortcut to your home screen so you can quickly open your Projet Nouveau Centre Privilèges card.",
+        'l1-android'    => "1. Click on the three dots in the top right-hand corner of your screen.",
+        'l2-android'    => "2. Click the option<br> \"Add to Home screen\".",
+        'l3-android'    => "3. The Projet Nouveau Centre Privilèges icon will now be on your home screen.",
 
         'l1-apple'    => "1. Click in the bottom center",
-        'l2-apple'    => "2. Add to home screen",
-        'l3-apple'    => "3. Icon is on your home screen",
+        'l2-apple'    => "2. Click the option<br> \"Add to Home screen\".",
+        'l3-apple'    => "3. The Projet Nouveau Centre Privilèges icon will now be on your home screen.",
 
         'mycard-titre'  =>  "My card",
-        'mycard-p'  =>  "Your digital card is displayed on the mobile version of Projet Nouveau Centre Privilèges web site. <br>
-        You can also get a physical card at Place Ville Marie information desk."
+        'mycard-p'  =>  "You can access your digital card on the mobile version of the Projet Nouveau Centre Privilèges website.<br> If you desire to have a physical card, you may get one at the Place Ville Marie information desk."
     ],
 
     'footer'      => [
