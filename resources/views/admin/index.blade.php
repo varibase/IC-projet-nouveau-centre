@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-sm-9">
+        <div class="col-lg-7">
             <!-- Area Chart Example-->
             <div class="card mb-3">
                 <div class="card-header">
@@ -13,7 +13,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-lg-5">
             <div class="card mb-3">
                 <div class="card-body">
                     <h2 class="display-2">Total : {{ $users->count() }}</h2>
