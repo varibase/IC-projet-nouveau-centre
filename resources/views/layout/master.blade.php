@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/app.css?v=2">
     <title>Projet Nouveau Centre</title>
 </head>
 <body>
@@ -25,7 +25,7 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/js/app.js"></script>
+<script src="/js/app.js?v=2"></script>
 <script type="text/javascript" src="/js/markerclusterer/markerclusterer.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 <script type="text/javascript" src="/js/vanillaTextMask.js"></script>
