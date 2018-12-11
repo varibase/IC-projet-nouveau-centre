@@ -1,6 +1,29 @@
 @extends('layout.admin')
 
 @section('content')
+    <div class="row">
+        <div class="col-sm-9">
+            <!-- Area Chart Example-->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fas fa-chart-area"></i>
+                    New Users over time</div>
+                <div class="card-body">
+                    <canvas id="myAreaChart" width="100%" height="30"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h2 class="display-2">Total : {{ $users->count() }}</h2>
+                    <h4 class="display-4 text-success">Confirmed : {{ $users->where('confirmed', true)->count() }}</h4>
+                    <h4 class="display-4 text-warning">Pending : {{ $users->where('confirmed', false)->count() }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- DataTables Example -->
     <div class="card mb-3">
         <div class="card-header">
@@ -194,5 +217,73 @@
             $('#user-{{ session('created') }}').trigger('click');
         });
         @endif
+
+
+        // Set new default font family and font color to mimic Bootstrap's default styling
+        Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+        Chart.defaults.global.defaultFontColor = '#292b2c';
+
+        // Area Chart Example
+        var ctx = document.getElementById("myAreaChart");
+        var myLineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: @foreach($graphData as $data)
+                            @if($loop->first)[@endif
+                            "{{ $data->date }}"
+                            @if(!$loop->last),@endif
+                            @if($loop->last)]@endif
+                        @endforeach
+                ,
+                datasets: [{
+                    label: "Users",
+                    lineTension: 0.3,
+                    backgroundColor: "rgba(2,117,216,0.2)",
+                    borderColor: "rgba(2,117,216,1)",
+                    pointRadius: 5,
+                    pointBackgroundColor: "rgba(2,117,216,1)",
+                    pointBorderColor: "rgba(255,255,255,0.8)",
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgba(2,117,216,1)",
+                    pointHitRadius: 50,
+                    pointBorderWidth: 2,
+                    data: @foreach($graphData as $data)
+                        @if($loop->first)[@endif
+                        "{{ $data->count }}"
+                        @if(!$loop->last),@endif
+                        @if($loop->last)]@endif
+                    @endforeach,
+                }],
+            },
+            options: {
+                scales: {
+                    xAxes: [{
+                        time: {
+                            unit: 'date'
+                        },
+                        gridLines: {
+                            display: false
+                        },
+                        ticks: {
+                            maxTicksLimit: 7
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            min: 0,
+                            max: 150,
+                            maxTicksLimit: 5
+                        },
+                        gridLines: {
+                            color: "rgba(0, 0, 0, .125)",
+                        }
+                    }],
+                },
+                legend: {
+                    display: false
+                }
+            }
+        });
+
     </script>
 @endpush

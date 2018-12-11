@@ -9,6 +9,7 @@ use App\Models\Location;
 use Mapper;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Company;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -21,8 +22,12 @@ class AdminController extends Controller
     {
         if(Auth::guard('admin')->check())
         {
+            $graphData = User::select(DB::raw('COUNT(*) AS count, CONVERT(varchar, created_at, 23) as date'))
+                ->where('created_at', '>', '2018-11-20')
+                ->groupBy(DB::raw('CONVERT(varchar, created_at, 23)'))
+                ->orderBy(DB::raw('CONVERT(varchar, created_at, 23)'))->get();
             $users = User::where('location_id', Auth::guard('admin')->user()->location_id)->with(['company', 'card'])->get();
-            return view('admin.index')->with('users',$users);
+            return view('admin.index')->with('users',$users)->with('graphData', $graphData);
         }
         else
         {
