@@ -36,7 +36,9 @@ return [
         'email'       => 'Email',
         'phone'       => 'Phone Number',
         'company'   => 'Company',
-        'companylist'      => [
+        'company-placeholder'    => 'Select a Company in the list or Create',
+        'company-add'    => 'create',
+        'companylist'       => [
                     "1" => "Ivanhoé Cambridge",
                     "2" => "Lorem Ipsum",
                     "3" => "Lorem Ipsum",

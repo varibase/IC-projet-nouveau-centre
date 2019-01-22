@@ -36,6 +36,8 @@ return [
         'email'       => 'Courriel',
         'phone'       => 'Cellulaire',
         'company'   => 'Compagnie',
+        'company-placeholder'    => 'Choisir dans la liste ou Saisir une compagnie',
+        'company-add'    => 'créer',
         'companylist'      => [
                     "1" => "Ivanhoé Cambridge",
                     "2" => "Lorem Ipsum",
