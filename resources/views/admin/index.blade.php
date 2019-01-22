@@ -39,7 +39,7 @@
                         <th>Company</th>
                         <th>Account Status</th>
                         <th>Physical Card</th>
-                        <th>Creation Date</th>
+                        <th>Creation Date (Y-m-d)</th>
                         <th>#</th>
                     </tr>
                     </thead>
@@ -69,7 +69,7 @@
                                 <span class="badge badge-danger">NO</span>
                             @endif
                         </td>
-                        <td>{{ $user->created_at->toFormattedDateString() }}</td>
+                        <td>{{ $user->created_at->toDateString() }}</td>
                         <td>
                             <button
                                     type="button"
