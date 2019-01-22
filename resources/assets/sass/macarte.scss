@@ -6,10 +6,32 @@
 }
 
 
+.mycard .modal-body h1 {
+    margin-bottom:0.5rem;
+}
 
-@media screen and (min-width: 320px) and (max-width: 812px) and (orientation:landscape) {
+@media screen and (orientation:portrait) {
 
-    html.mycard {
+    #macarte-landscape {
+        display:none;
+    }
+    #macarte-portrait {
+        
+        display:block;
+    }
+ 
+}
+@media screen and (orientation:landscape) {
+
+    #macarte-portrait {
+        display:none;
+    }
+    #macarte-landscape {
+        
+        display:block;
+    }
+
+/*    html.mycard {
         transform: rotate(-90deg);
         transform-origin: left top;
         width: 100vh !important;
@@ -19,5 +41,6 @@
         top: 100%;
         left: 0;
       }
+      */
    
   }
