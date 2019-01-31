@@ -130,23 +130,7 @@
                 };
             },
         });
-        /*
-        $("#company").on("select2:select", function(e){
-            $newtag = e.params.data;
-            if ($newtag) {
-                if (/ \(@lang('pages.register.company-add')\)$/.test($newtag.text)) { 
 
-                    var response = confirm("Do you want to add the new tag "+$newtag.id+"?");
-                    if (response == true) {
-                        //alert("Will now send new tag to server: " + $newtag.id);
-
-                    } else {
-                        //console.log("Removing the tag");
-                        $("#company").val(null).trigger('change');
-                }
-            }
-            }
-        });*/
     });
 
     var phoneMask = ['+', '1', '(', /[1-9]/, /\d/, /\d/, ')', '-', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];

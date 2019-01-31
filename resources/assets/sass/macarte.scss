@@ -1,46 +1,28 @@
 #macarte {
-   /* width: 100%;
-    height: 100%;*/
     display: block;
-   /* height: 95% !important;*/
 }
-
 
 .mycard .modal-body h1 {
     margin-bottom:0.5rem;
 }
 
-@media screen and (orientation:portrait) {
+@media (orientation: portrait) {
 
     #macarte-landscape {
         display:none;
     }
     #macarte-portrait {
-        
         display:block;
     }
- 
 }
-@media screen and (orientation:landscape) {
+
+@media (orientation: landscape) {
 
     #macarte-portrait {
         display:none;
     }
     #macarte-landscape {
-        
         display:block;
     }
-
-/*    html.mycard {
-        transform: rotate(-90deg);
-        transform-origin: left top;
-        width: 100vh !important;
-        height: 100vw !important;
-        overflow-x: hidden;
-        position: absolute;
-        top: 100%;
-        left: 0;
-      }
-      */
    
-  }
+}
