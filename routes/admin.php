@@ -20,3 +20,10 @@ Route::get('/logout', 'AdminController@logout');
 Route::post('/update', 'AdminController@update');
 Route::post('/create', 'AdminController@create');
 
+Route::post('/partners/{partner?}', 'PartnersController@store');
+Route::get('/partners', 'PartnersController@index');
+Route::get('/partners/edit/{partner?}', 'PartnersController@edit');
+Route::post('/offers/{offer?}', 'OffersController@store');
+Route::get('/offers', 'OffersController@index');
+Route::get('/offers/edit/{offer?}', 'OffersController@edit');
+

@@ -21,4 +21,33 @@ class Partner extends Model
     {
         return $this->hasOne(Address::class, 'address_id', 'address_id');
     }
+
+    public function getRouteKeyName()
+    {
+        return 'partner_id';
+    }
+
+    public static function getFromGroupId($group_id)
+    {
+        $group = Group::where('group_id', $group_id)->first();
+        $locations = Location::where('group_id', $group->group_id)->get();
+        $partners = Partner::whereIn('location_id', $locations->pluck('location_id'))->get();
+
+        return $partners;
+    }
+
+    public function setAddress($data)
+    {
+        if($this->address)
+        {
+            $address = $this->address;
+        }
+        else
+        {
+            $address = Address::create();
+        }
+
+        $address->fill($data)->save();
+        return $address;
+    }
 }

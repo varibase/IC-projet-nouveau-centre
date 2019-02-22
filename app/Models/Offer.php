@@ -26,4 +26,22 @@ class Offer extends Model
     {
         return 'offer_id';
     }
+
+    public function getLangInfo($lang)
+    {
+        $info = $this->info->where('lang', $lang);
+        if($info)
+        {
+            return $info->first();
+        }
+        else
+        {
+            $offerInfo = new OfferInfo();
+            $offerInfo->offer_id = $this->offer_id;
+            $offerInfo->save();
+            return $offerInfo;
+        }
+
+    }
+
 }

@@ -27,7 +27,7 @@ class AdminController extends Controller
                 ->groupBy(DB::raw('CONVERT(varchar, created_at, 23)'))
                 ->orderBy(DB::raw('CONVERT(varchar, created_at, 23)'))->get();
             $users = User::where('location_id', Auth::guard('admin')->user()->location_id)->with(['company', 'card'])->get();
-            return view('admin.index')->with('users',$users)->with('graphData', $graphData);
+            return view('admin.users')->with('users',$users)->with('graphData', $graphData);
         }
         else
         {

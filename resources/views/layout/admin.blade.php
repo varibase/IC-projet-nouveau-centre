@@ -67,10 +67,20 @@
                 <i class="fas fa-user-plus"></i>
                 <span>New User</span></a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item @if(\Route::current()->uri == 'admin') active @endif">
             <a class="nav-link" href="/admin/">
                 <i class="fas fa-fw fa-table"></i>
-                <span>UserList</span></a>
+                <span>Users</span></a>
+        </li>
+        <li class="nav-item @if(\Route::current()->uri == 'admin/partners') active @endif">
+            <a class="nav-link" href="/admin/partners">
+                <i class="fas fa-fw fa-building"></i>
+                <span>Partners</span></a>
+        </li>
+        <li class="nav-item @if(\Route::current()->uri == 'admin/offers') active @endif">
+            <a class="nav-link" href="/admin/offers">
+                <i class="fas fa-fw fa-building"></i>
+                <span>Offers</span></a>
         </li>
     </ul>
 
@@ -86,14 +96,7 @@
         </div>
         <!-- /.container-fluid -->
 
-        <!-- Sticky Footer -->
-        <footer class="sticky-footer">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright © Website 2018</span>
-                </div>
-            </div>
-        </footer>
+
 
     </div>
     <!-- /.content-wrapper -->
