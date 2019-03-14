@@ -32,7 +32,7 @@ class IndexController extends Controller
         {
             $location = Location::where('shortname', session('location'))->first();
         }
-        $offers = $location->group->offers()->get();
+        $offers = $location->group->offers()->orderBy('partner_id', 'asc')->get();
         $i = 0;
         foreach($offers as $offer)
         {
