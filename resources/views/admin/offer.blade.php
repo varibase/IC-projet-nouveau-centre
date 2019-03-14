@@ -6,6 +6,15 @@
         <div class="card-body">
             <h1>Offer</h1>
             <hr>
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <form action="@if(!empty($offer->offer_id))/admin/offers/{{ $offer->offer_id }} @else /admin/offers @endif" method="post">
                 {{ csrf_field() }}
             <div class="row">

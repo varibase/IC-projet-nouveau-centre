@@ -55,7 +55,7 @@ class OffersController extends Controller
             $offer = Offer::create(['group_id' => Auth::guard('admin')->user()->location->group->group_id]);
         }
         $offer->fill($request->only(['partner_id', 'start_date', 'end_date']));
-
+        $offer->save();
         $offerInfoFR = $offer->getLangInfo('fr');
         $offerInfoEN = $offer->getLangInfo('en');
         $offerInfoFR->fill($request->only('info_fr')['info_fr']);

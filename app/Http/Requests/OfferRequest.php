@@ -26,17 +26,17 @@ class OfferRequest extends FormRequest
         return [
             'partner_id' => 'required',
             'start_date' => 'required|date_format:Y-m-d',
-            'end_date' => 'nullable|date_format:Y-m-d|after:start_date',
+            'end_date' => 'nullable|date_format:Y-m-d',
             'info_en' => 'array',
             'info_en.title' => 'string|max:250',
             'info_en.description' => 'string|max:500',
-            'info_en.howto' => 'string|max:500',
-            'info_en.legal_terms' => 'string|max:750',
+            'info_en.howto' => 'string|max:500|nullable',
+            'info_en.legal_terms' => 'string|max:750|nullable',
             'info_fr' => 'array',
             'info_fr.title' => 'string|max:250',
             'info_fr.description' => 'string|max:500',
-            'info_fr.howto' => 'string|max:500',
-            'info_fr.legal_terms' => 'nullable|string|max:750',
+            'info_fr.howto' => 'string|max:500|nullable',
+            'info_fr.legal_terms' => 'nullable|string|max:750|nullable',
         ];
     }
 }

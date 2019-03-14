@@ -29,8 +29,8 @@ class Offer extends Model
 
     public function getLangInfo($lang)
     {
-        $info = $this->info->where('lang', $lang);
-        if($info)
+        $info = $this->info()->where('lang', $lang);
+        if($info->count())
         {
             return $info->first();
         }
@@ -38,6 +38,7 @@ class Offer extends Model
         {
             $offerInfo = new OfferInfo();
             $offerInfo->offer_id = $this->offer_id;
+            $offerInfo->lang = $lang;
             $offerInfo->save();
             return $offerInfo;
         }
