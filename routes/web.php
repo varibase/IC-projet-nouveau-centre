@@ -20,6 +20,10 @@ Route::get('/lang/{lang?}',[
     'as'  => 'lang.switch'
 ]);
 
+Route::get('/offline', function(){
+   return view('offline');
+});
+
 Route::get('/offer/{offer}', 'OffersController@show');
 
 Route::get('/register', 'RegistrationController@create')->name('register');
