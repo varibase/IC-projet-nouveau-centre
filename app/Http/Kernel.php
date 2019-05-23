@@ -37,6 +37,7 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\CheckLocale::class,
             \App\Http\Middleware\CheckSource::class,
+            \App\Http\Middleware\UpdateLastVisit::class,
         ],
 
         'admin' => [

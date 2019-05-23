@@ -42,6 +42,7 @@ class AppServiceProvider extends ServiceProvider
            $companies = Company::where('active', true)->where('location_id', $location->location_id)->get();
             View::share('companies', $companies);
         });
+
     }
 
     /**
