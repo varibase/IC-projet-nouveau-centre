@@ -79,6 +79,8 @@
         });
     }
 </script>
-<script src="/notification.js"></script>
+@if(auth()->check())
+    <script src="/notification.js"></script>
+@endif
 </body>
 </html>
