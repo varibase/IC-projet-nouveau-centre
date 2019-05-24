@@ -20,11 +20,17 @@
     <!-- Bootstrap CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/app.css?v=2">
     <title>Projet Nouveau Centre</title>
 
 </head>
 <body>
+{{--
+<div class="fab__push" style="position: fixed;z-index:9999;bottom: 15px; right: 15px;cursor:pointer;">
+    <i class="fas fa-bell-slash fab__image"></i>
+</div>
+--}}
 @include('partials.navbar')
 
 <div class="offcanvas-outside">
@@ -73,5 +79,6 @@
         });
     }
 </script>
+<script src="/notification.js"></script>
 </body>
 </html>

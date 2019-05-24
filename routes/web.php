@@ -55,3 +55,7 @@ Route::post('/update', 'ProfileController@update')->name('profile.update');
 Route::get('/help', 'HelpController@show');
 Route::get('/help/{device}', 'HelpController@device');
 Route::get('/mycardhelp', 'HelpController@cardhelp');
+
+//Push
+Route::get('/push/optin/{subscription_id}', 'PushController@saveSubscriptionId');
+Route::get('/push/optout/{subscription_id}', 'PushController@removeSubscriptionId');

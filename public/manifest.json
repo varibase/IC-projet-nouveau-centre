@@ -57,5 +57,6 @@
     }
   ],
   "start_url": "https://privileges.projetnouveaucentre.ca/",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "gcm_sender_id": "535117996475"
 }

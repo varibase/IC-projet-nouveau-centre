@@ -72,7 +72,7 @@
                 <i class="fas fa-fw fa-table"></i>
                 <span>Users</span></a>
         </li>
-        {{--
+
         <li class="nav-item @if(\Route::current()->uri == 'admin/partners') active @endif">
             <a class="nav-link" href="/admin/partners">
                 <i class="fas fa-fw fa-building"></i>
@@ -83,7 +83,7 @@
                 <i class="fas fa-fw fa-building"></i>
                 <span>Offers</span></a>
         </li>
-        --}}
+
     </ul>
 
     <div id="content-wrapper">

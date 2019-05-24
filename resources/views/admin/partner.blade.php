@@ -22,14 +22,14 @@
                     <h3>EN</h3>
                     <div class="form-group">
                         <label for="name-en">Name</label>
-                        <input type="text" class="form-control" id="name-en" name="name_en" value="{{ $partner->name_en }}">
+                        <input type="text" class="form-control" id="name-en" name="name_en" value="@if(!empty($partner->name_en)){{ $partner->name_en }}@else{{ old('name_en') }}@endif">
                     </div>
                 </div>
                 <div class="col-6 border-left border-top border-bottom pt-3">
                     <h3>FR</h3>
                     <div class="form-group">
                         <label for="name-fr">Name</label>
-                        <input type="text" class="form-control" id="name-fr" name="name_fr" value="{{ $partner->name_fr }}">
+                        <input type="text" class="form-control" id="name-fr" name="name_fr" value="@if(!empty($partner->name_fr)){{ $partner->name_fr }}@else{{ old('name_fr') }}@endif">
                     </div>
                 </div>
                 <div class="col-6 py-3">
@@ -65,23 +65,23 @@
                     <h3>Address</h3>
                     <div class="form-group">
                         <label for="address1">Address 1</label>
-                        <input type="text" class="form-control" id="address1" name="address[address_1]" value="{{ $address->address_1 }}">
+                        <input type="text" class="form-control" id="address1" name="address[address_1]" value="@if(!empty($address->address_1)){{ $address->address_1 }}@else{{ old('address.address_1') }}@endif">
                     </div>
                     <div class="form-group">
                         <label for="address2">Address 2</label>
-                        <input type="text" class="form-control" id="address2" name="address[address_2]" value="{{ $address->address_2 }}">
+                        <input type="text" class="form-control" id="address2" name="address[address_2]" value="@if(!empty($address->address_2)){{ $address->address_2 }}@else{{ old('address.address_2') }}@endif">
                     </div>
                     <div class="form-group">
                         <label for="postal-code">Postal Code</label>
-                        <input type="text" class="form-control" id="postal-code" name="address[postal_code]" value="{{ $address->postal_code }}">
+                        <input type="text" class="form-control" id="postal-code" name="address[postal_code]" value="@if(!empty($address->postal_code)){{ $address->postal_code }}@else{{ old('address.postal_code') }}@endif">
                     </div>
                     <div class="form-group">
                         <label for="city">City</label>
-                        <input type="text" class="form-control" id="city" name="address[city]" value="{{ $address->city }}">
+                        <input type="text" class="form-control" id="city" name="address[city]" value="@if(!empty($address->city)){{ $address->city }}@else{{ old('address.city') }}@endif">
                     </div>
                     <div class="form-group">
                         <label for="province">Province</label>
-                        <input type="text" class="form-control" id="province" name="address[province]" value="{{ $address->province }}">
+                        <input type="text" class="form-control" id="province" name="address[province]" value="@if(!empty($address->province)){{ $address->province }}@else{{ old('address.province') }}@endif">
                     </div>
                 </div>
                 <div class="col-6 pt-5" style="height: 350px;">

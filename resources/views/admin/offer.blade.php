@@ -34,11 +34,11 @@
                     <div class="form-group">
                         <label>Offer Date</label>
                         <div class="input-daterange input-group" id="datepicker">
-                            <input type="text" class="input-sm form-control" name="start_date" value="{{ $offer->start_date }}" />
+                            <input type="text" class="input-sm form-control" name="start_date" value="@if(!empty($offer->start_date)){{ $offer->start_date }}@else {{ old('start_date') }} @endif" />
                             <span class="input-group-append rounded-0">
                                 <span class="input-group-text">to</span>
                             </span>
-                            <input type="text" class="input-sm form-control" name="end_date" value="{{ $offer->end_date }}"/>
+                            <input type="text" class="input-sm form-control" name="end_date" value="@if(!empty($offer->end_date)){{ $offer->end_date }}@else {{ old('end_date') }} @endif"/>
                         </div>
                     </div>
                 </div>
@@ -49,38 +49,38 @@
                     <h3>EN</h3>
                     <div class="form-group">
                         <label for="title_en">Title</label>
-                        <input type="text" class="form-control" id="title_en" name="info_en[title]" value="{{ $info_en->title }}">
+                        <input type="text" class="form-control" id="title_en" name="info_en[title]" value="@if(!empty($info_en->title)) {{ $info_en->title }} @else {{ old('info_en.title') }} @endif">
                     </div>
                     <div class="form-group">
                         <label for="description_en">Description</label>
-                        <textarea class="form-control" name="info_en[description]" id="description_en">{{ $info_en->description }}</textarea>
+                        <textarea class="form-control" name="info_en[description]" id="description_en">@if(!empty($info_en->description)){{ $info_en->description }}@else {{ old('info_en.description') }} @endif</textarea>
                     </div>
                     <div class="form-group">
                         <label for="howto_en">How To</label>
-                        <textarea class="form-control" name="info_en[howto]" id="howto_en">{{ $info_en->howto }}</textarea>
+                        <textarea class="form-control" name="info_en[howto]" id="howto_en">@if(!empty($info_en->howto)){{ $info_en->howto }}@else {{ old('info_en.howto') }}@endif</textarea>
                     </div>
                     <div class="form-group">
                         <label for="legal_en">Legal Terms</label>
-                        <textarea class="form-control" name="info_en[legal_terms]" id="legal_en">{{ $info_en->legal_terms }}</textarea>
+                        <textarea class="form-control" name="info_en[legal_terms]" id="legal_en">@if(!empty($info_en->legal_terms)){{ $info_en->legal_terms }}@else {{ old('info_en.legal_terms') }} @endif</textarea>
                     </div>
                 </div>
                 <div class="col-6 border-left">
                     <h3>FR</h3>
                     <div class="form-group">
                         <label for="title_fr">Title</label>
-                        <input type="text" class="form-control" id="title_fr" name="info_fr[title]" value="{{ $info_fr->title }}">
+                        <input type="text" class="form-control" id="title_fr" name="info_fr[title]" value="@if(!empty($info_fr->title)){{ $info_fr->title }}@else {{ old('info_fr.title') }} @endif">
                     </div>
                     <div class="form-group">
                         <label for="description_fr">Description</label>
-                        <textarea class="form-control" name="info_fr[description]" id="description_fr">{{ $info_fr->description }}</textarea>
+                        <textarea class="form-control" name="info_fr[description]" id="description_fr">@if(!empty($info_fr->description)){{ $info_fr->description }}@else {{ old('info_fr.description') }}@endif</textarea>
                     </div>
                     <div class="form-group">
                         <label for="howto_fr">How To</label>
-                        <textarea class="form-control" name="info_fr[howto]" id="howto_fr">{{ $info_fr->howto }}</textarea>
+                        <textarea class="form-control" name="info_fr[howto]" id="howto_fr">@if(!empty($info_fr->howto)){{ $info_fr->howto }}@else {{ old('info_fr.howto') }}@endif</textarea>
                     </div>
                     <div class="form-group">
                         <label for="legal_fr">Legal Terms</label>
-                        <textarea class="form-control" name="info_fr[legal_terms]" id="legal_fr">{{ $info_fr->legal_terms }}</textarea>
+                        <textarea class="form-control" name="info_fr[legal_terms]" id="legal_fr">@if(!empty($info_fr->legal_terms)){{ $info_fr->legal_terms }} @else {{ old('info_fr.legal_terms') }} @endif</textarea>
                     </div>
                 </div>
             </div>
