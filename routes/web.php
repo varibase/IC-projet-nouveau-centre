@@ -59,3 +59,7 @@ Route::get('/mycardhelp', 'HelpController@cardhelp');
 //Push
 Route::get('/push/optin/{subscription_id}', 'PushController@saveSubscriptionId');
 Route::get('/push/optout/{subscription_id}', 'PushController@removeSubscriptionId');
+
+//Formulaire Inscription
+Route::get('/activation/form', 'ActivationController@form');
+Route::post('/activation/store', 'ActivationController@store');

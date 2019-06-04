@@ -43,6 +43,11 @@ class AppServiceProvider extends ServiceProvider
             View::share('companies', $companies);
         });
 
+        View()->composer('activation.form', function($view){
+            $companies = Company::where('active', true)->where('location_id', 1)->get();
+            View::share('companies', $companies);
+        });
+
     }
 
     /**
