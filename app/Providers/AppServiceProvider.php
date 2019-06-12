@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
            {
                $location = Location::where('shortname', session('location'))->first();
            }
-           $offers = $location->group->offers()->orderBy('partner_id', 'asc')->get();
+           $offers = $location->group->offers()->where('start_date', '<=', date('Y-m-d'))->where('end_date', '>=', date('Y-m-d'))->orderBy('partner_id', 'asc')->get();
            View::share('offers', $offers);
         });
 
