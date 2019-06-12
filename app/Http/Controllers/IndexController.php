@@ -32,7 +32,11 @@ class IndexController extends Controller
         {
             $location = Location::where('shortname', session('location'))->first();
         }
-        $offers = $location->group->offers()->where('start_date', '<=', date('Y-m-d'))->where('end_date', '>=', date('Y-m-d'))->orderBy('partner_id', 'asc')->get();
+        $offers = $location->group->offers()
+            ->where('start_date', '<=', date('Y-m-d'))
+            ->where(function($query){
+            $query->where('end_date', '>=', date('Y-m-d'))->orWhereNull('end_date');
+        })->orderBy('partner_id', 'asc')->get();
         $i = 0;
         foreach($offers as $offer)
         {
