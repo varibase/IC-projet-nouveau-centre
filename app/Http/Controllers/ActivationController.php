@@ -18,6 +18,7 @@ class ActivationController extends Controller
 
     public function form()
     {
+        App::setLocale('fr');
         return view('activation.form');
     }
 

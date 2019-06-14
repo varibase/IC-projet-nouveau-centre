@@ -42,12 +42,7 @@
         </div>
     </div>
 </header>
-
-
-
     @yield('content')
-
-
 <footer>
 
 </footer>
