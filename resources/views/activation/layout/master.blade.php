@@ -38,7 +38,7 @@
 <header>
     <div class="row">
         <div class="col">
-                <img src="https://varibase.emsecure.net/images/PNC/infolettre/201902/header.png" alt="" style="width: 100%; height: auto;">
+                <img src="/img/ipad.jpg" alt="" style="width: 100%; height: auto;">
         </div>
     </div>
 </header>

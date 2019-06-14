@@ -3,7 +3,7 @@
 @section('content')
     <div class="row mx-0">
         <div class="col py-4">
-            <h2 style="font-size:1.75rem;">Inscrivez-vous aujourd’hui au Programme Projet Nouveau Centre Privilèges et courez la chance de gagner une carte&#8209;cadeau de 100$<sup>*</sup></h2>
+            <h2 style="font-size:1.75rem;">Inscrivez-vous aujourd’hui &agrave; la carte Projet Nouveau Centre Privilèges et courez la chance de gagner une carte&#8209;cadeau de 100 $<sup>*</sup></h2>
             <div id="result"></div>
             <div id="errors"></div>
         </div>
@@ -89,7 +89,7 @@
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="1" name="terms" id="terms" required>
                                 <label class="form-check-label" for="terms">
-                                    J'accepte <a href="{{ asset("files/legal-".\App::getLocale().".pdf") }}" style="text-decoration: underline; color:#000000;" target="_blank">les conditions d'utilisations</a> et les <a href="#" style="text-decoration: underline; color:#000000;">règlements du concours</a>
+                                    J'accepte <a href="{{ asset("files/legal-".\App::getLocale().".pdf") }}" style="text-decoration: underline; color:#000000;" target="_blank">les conditions d'utilisations</a> et les <a href="{{ asset("files/PNC-concours.pdf") }}" style="text-decoration: underline; color:#000000;">règlements du concours</a>
                                 </label>
                                 <div class="invalid-feedback">
                                     @lang('pages.formerrors.terms')
