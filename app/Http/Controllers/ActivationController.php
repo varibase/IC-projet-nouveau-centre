@@ -24,15 +24,18 @@ class ActivationController extends Controller
 
     public function store(RegistrationRequest $request)
     {
+
         $location = Location::find(1);
         $user = $request->registerUser($location);
 
+        App::setLocale($request->lang);
         Mail::send('email.confirm', ['confirmation_code' => $user->confirmation_code, 'prenom' => $user->first_name],
             function($message) use ($user) {
                 $message->to($user->email, $user->first_name." ".$user->last_name)
                     ->subject(__('emails.email-confirm.subject'));
             });
 
+        App::setLocale('fr');
         return response()->json([
             'success'   => true,
             'msg'       => __('pages.register.success'),
