@@ -39,6 +39,7 @@
                         <th>Company</th>
                         <th>Account Status</th>
                         <th>Physical Card</th>
+                        <th>Optin Push</th>
                         <th>Creation Date (Y-m-d)</th>
                         <th>#</th>
                     </tr>
@@ -64,6 +65,13 @@
                         <td>@if($user->confirmed) <span class="badge badge-success">CONFIRMED</span> @else <span class="badge badge-warning">PENDING CONFIRMATION</span> @endif</td>
                         <td>
                             @if($user->card()->where('type_id', 2)->count())
+                                <span class="badge badge-success">YES</span>
+                            @else
+                                <span class="badge badge-danger">NO</span>
+                            @endif
+                        </td>
+                        <td>
+                            @if(!empty($user->subscription_id))
                                 <span class="badge badge-success">YES</span>
                             @else
                                 <span class="badge badge-danger">NO</span>
