@@ -21,7 +21,7 @@ if ('serviceWorker' in navigator) {
                 return messaging.getToken()
             })
             .then(function(token){
-                console.log(token);
+                $.get('/push/optin/'+token);
             })
             .catch(function (err) {
                 console.log("Unable to get permission to notify.", err);
