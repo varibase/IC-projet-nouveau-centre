@@ -74,7 +74,7 @@
 @if(auth()->check())
     <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-messaging.js"></script>
-    <script src="/firebase.js"></script>
+    <script src="/firebase-messaging-sw.js"></script>
     {{-- <script src="/notification.js"></script> --}}
 @endif
 </body>
