@@ -66,21 +66,16 @@
     });
 </script>
 <script type="text/javascript">
-    // Initialize the service worker
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js', {
-            scope: '.'
-        }).then(function (registration) {
-            // Registration was successful
-            console.log('Laravel PWA: ServiceWorker registration successful with scope: ', registration.scope);
-        }, function (err) {
-            // registration failed :(
-            console.log('Laravel PWA: ServiceWorker registration failed: ', err);
-        });
-    }
+
 </script>
+
+
+
 @if(auth()->check())
-    <script src="/notification.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-messaging.js"></script>
+    <script src="/firebase.js"></script>
+    {{-- <script src="/notification.js"></script> --}}
 @endif
 </body>
 </html>
