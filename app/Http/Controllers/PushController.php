@@ -16,12 +16,12 @@ class PushController extends Controller
             $user->subscription_id = $subscription_id;
             $user->save();
             Log::debug('Optin Push Success');
-            return true;
+            return $user;
         }
         else
         {
             Log::debug('Optin Push Failure');
-            return false;
+            return "Error";
         }
     }
 
