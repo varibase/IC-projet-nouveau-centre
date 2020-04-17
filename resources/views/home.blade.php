@@ -10,6 +10,12 @@
                 <h5>@lang('pages.home.sous-titre')</h5>
             </div>
         </div>
+        <div class="row justify-content-md-center">
+            <div class="col col-md-9 col-lg-5 py-5 px-4 text-center txt-punch" data-aos="zoom-out-up" data-aos-delay="100" data-aos-duration="800">
+                <h5>@lang('pages.home.no-offers')</h5>
+            </div>
+        </div>
+        {{--
         <div class="row align-items-center">
             <div class="bloc-privileges col-12 justify-content-center" align="center">
                 <h3 class="d-inline">@lang('pages.home.privileges')</h3>
@@ -24,13 +30,13 @@
                     <a class="icon" id="icon-filter">
                         <i class="ifilter"></i>
                     </a>
-                    --}}
+
                 </div>
 
             </div>
         </div>
     </div>
-
+    --}}
     <div class="offers-list">
         <div id="regular-list" class="mb-5">
             @include('partials.offers-list')
@@ -39,7 +45,6 @@
             @include('partials.google-map')
         </div>
     </div>
-
     @include('partials.modals')
 
     @if (session('popin'))

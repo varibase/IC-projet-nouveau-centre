@@ -18,7 +18,8 @@ return [
         'sous-titre'    => 'En tant qu’occupants du secteur, vous êtes au cœur de notre initiative de revitalisation du centre-ville de Montréal, c’est pourquoi nous vous offrons la carte Projet Nouveau Centre Privilèges qui vous permettra de bénéficier en tout temps de plusieurs rabais et offres chez nos partenaires.',
         'privileges'    => 'Vos Privil&egrave;ges',
         'offer-cta'     => 'EN SAVOIR PLUS',
-
+        'covid' => 'La priorité absolue d\'Ivanhoé Cambridge est la santé et la sécurité de ses clients, locataires, employés et des communautés dans lesquelles la Société est présente. Ivanhoé Cambridge déploie tous les moyens à sa disposition pour contribuer au contrôle de la propagation du virus et elle suit de près l’évolution de la situation. ',
+        'no-offers' => 'Il n’y a pas nouvelles offres liées à la carte privilège pour le moment, et nous vous invitons à revenir nous voir dans quelques semaines. '
     ],
 
     'offers' => [

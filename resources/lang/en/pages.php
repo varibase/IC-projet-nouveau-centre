@@ -18,7 +18,8 @@ return [
         'sous-titre'    => 'As members of our local community, you are at the heart of our revitalization initiative for downtown Montreal. That is why we are offering you the Projet Nouveau Centre Privilèges card, which will allow you to take advantage of a variety of discounts and offers from our partners at all times.',
         'privileges'    => 'Your privileges',
         'offer-cta'     => 'LEARN MORE',
-
+        'covid' => 'Ivanhoé Cambridge’s top priority is the health and safety of its customers, tenants, employees and the communities where the Company operates. Ivanhoé Cambridge is using all available means to help control the spread of COVID-19 and is closely monitoring the situation.',
+        'no-offers' => 'There are no new Projet Nouveau Centre Privilège card offers at this time, but please check back with us in a few weeks.'
     ],
 
     'offers' => [

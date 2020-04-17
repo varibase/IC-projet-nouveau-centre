@@ -31,6 +31,9 @@
     <i class="fas fa-bell-slash fab__image"></i>
 </div>
 --}}
+<div class="alert alert-secondary mb-0" role="alert">
+    @lang('pages.home.covid')
+</div>
 @include('partials.navbar')
 
 <div class="offcanvas-outside">
