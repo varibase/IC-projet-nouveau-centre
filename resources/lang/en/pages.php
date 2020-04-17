@@ -124,7 +124,7 @@ return [
     ],
 
     'footer'      => [
-        'l1' => '&copy; 2018 Ivanhoé Cambridge',
+        'l1' => '&copy; 2020 Ivanhoé Cambridge',
         'l2' => 'Ivanhoé Cambridge Inc.',
         'l3' => '1001, rue du Square-Victoria',
         'l4' => 'Montréal, Québec, Canada  H2Z 2B5',
