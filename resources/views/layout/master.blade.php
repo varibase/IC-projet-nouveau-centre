@@ -32,7 +32,7 @@
 </div>
 --}}
 <div class="alert alert-secondary mb-0" role="alert">
-    @lang('pages.home.covid')
+    <i>@lang('pages.home.covid')</i>
 </div>
 @include('partials.navbar')
 
